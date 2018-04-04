@@ -1,6 +1,16 @@
 body {
   font-family: "Abel", sans-serif;
+  overflow: hidden;
 }
+
+section {
+    margin-top: 300px;
+}
+
+#main {
+    overflow-y: scroll;
+}
+
 #title {
   font-weight: 200;
   font-size: 3.2em;
@@ -33,4 +43,12 @@ body {
 
 .navbar a.is-inview {
     background-color: aqua;
+}
+
+#sidebar {
+    margin-top: 100px;
+}
+
+#sidebar .section {
+    margin-top: 0;
 }
