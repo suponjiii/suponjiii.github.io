@@ -7,9 +7,6 @@ section {
     margin-top: 300px;
 }
 
-#main {
-    overflow-y: scroll;
-}
 
 #title {
   font-weight: 200;
@@ -46,9 +43,10 @@ section {
 }
 
 #sidebar {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #sidebar .section {
     margin-top: 0;
+    position: fixed;
 }
