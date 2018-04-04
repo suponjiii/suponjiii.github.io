@@ -4,6 +4,7 @@ body {
 #title {
   font-weight: 200;
   font-size: 3.2em;
+  margin-bottom: 50px;
 }
 
 #title .text-wrapper {
@@ -28,4 +29,8 @@ body {
 #title .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+.navbar a.is-inview {
+    background-color: aqua;
 }
