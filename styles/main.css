@@ -3,24 +3,23 @@ body {
   overflow: hidden;
 }
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 li {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #title {
-    font-size: 55px!important;
+  font-size: 55px !important;
 }
 .subtitle {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 section {
-    margin-top: 200px;
+  padding-top: 200px!important;
 }
-
 
 #title {
   font-weight: 200;
@@ -29,7 +28,7 @@ section {
 }
 
 .factors {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 #title .text-wrapper {
@@ -56,19 +55,25 @@ section {
   line-height: 1em;
 }
 
-.navbar a.is-inview {
-    background-color: aqua;
+#sidebar li a {
+  padding-left: 8px;
+  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+}
+
+#sidebar li a.active {
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .icons svg {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 #sidebar {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 #sidebar .section {
-    margin-top: 0;
-    position: fixed;
+  margin-top: 0;
+  position: fixed;
 }
