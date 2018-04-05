@@ -1,6 +1,6 @@
 $(document).ready(function(){
     window.sr = ScrollReveal();
-    sr.reveal("section");
+    sr.reveal(".scroll");
 })
 
 

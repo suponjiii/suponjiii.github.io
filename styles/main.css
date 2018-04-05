@@ -2,9 +2,24 @@ body {
   font-family: "Abel", sans-serif;
   overflow: hidden;
 }
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 20px;
+}
+
+#title {
+    font-size: 55px!important;
+    opacity: 0;
+}
+.subtitle {
+    font-size: 25px;
+}
 
 section {
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 
@@ -12,6 +27,10 @@ section {
   font-weight: 200;
   font-size: 3.2em;
   margin-bottom: 50px;
+}
+
+.factors {
+    font-size: 25px;
 }
 
 #title .text-wrapper {
@@ -40,6 +59,10 @@ section {
 
 .navbar a.is-inview {
     background-color: aqua;
+}
+
+.icons svg {
+    margin-right: 50px;
 }
 
 #sidebar {
