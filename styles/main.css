@@ -18,7 +18,7 @@ li {
 }
 
 section {
-  padding-top: 200px!important;
+  padding-top: 250px!important;
 }
 
 #title {
@@ -28,7 +28,12 @@ section {
 }
 
 .factors {
-  font-size: 25px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.navbar-item {
+    transition: all 400ms;
 }
 
 #title .text-wrapper {
@@ -73,7 +78,61 @@ section {
   margin-top: 50px;
 }
 
+#sidebar a {
+    transition: all 400ms;
+}
+
 #sidebar .section {
   margin-top: 0;
   position: fixed;
+  padding-top: 0!important;
+}
+
+.card-content {
+    display: none;
+}
+
+#about h3 {
+    text-align: center;
+}
+
+.introduction {
+    margin-bottom: 50px;
+}
+
+.card-header-icon {
+    transition-duration: 0.8s;
+}
+.activeToggle {
+    transform: rotate(180deg);
+}
+
+#contacts svg {
+    transform: scale(1.3);
+    color: #3273dc;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#contacts svg:hover {
+    transform: scale(1.8);
+}
+
+.fa-discord {
+    color: #4a4a4a!important;
+    cursor: default!important;
+}
+
+svg.fa-discord:hover {
+    transform: scale(1.3)!important;
+}
+
+@media (max-width: 480px) {
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+    #title {
+        font-size: 50px!important;
+    }
 }
