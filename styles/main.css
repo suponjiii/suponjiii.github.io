@@ -32,6 +32,16 @@ section {
   margin-top: 60px;
 }
 
+
+/* Baustelle */
+
+.xx {
+  position: relative;
+  margin-top: 60px;
+}
+
+/* Ende */
+
 .navbar-item {
     transition: all 400ms;
 }

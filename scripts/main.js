@@ -51,3 +51,10 @@ var navbar = document.querySelector(".navbar-start");
 scrollSpy(menu, 2000, 'easeInOutQuint');
 scrollSpy(navbar, 2000, 'easeInOutQuint');
 
+
+
+
+
+
+
+
