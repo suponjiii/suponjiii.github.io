@@ -43,13 +43,47 @@ $(document).ready(function(){
 })
 
 
-
-
-
 var menu = document.querySelector('#sidebar');
 var navbar = document.querySelector(".navbar-start");
 scrollSpy(menu, 2000, 'easeInOutQuint');
 scrollSpy(navbar, 2000, 'easeInOutQuint');
+
+
+
+// Mixing prices
+var amountAdditionalLines = input;
+var amountOfChorusLines = input;
+var acoustic = 1;
+var pop = 1;
+var rock = 1.2;
+var electro = 1.5;
+
+// Solo
+var soloTuningBase = 7;
+var soloTimingBase = 5;
+var soloMixingBase = 10;
+var soloDiscount = 0.9;
+
+// Duet
+var duetTuningBase = 8;
+var duetTimingBase = 9;
+var duetMixingBase = 12;
+var duetDiscount 0.85;
+
+// Trio
+var trioTuningBase = 9;
+var trioTimingBase = 11;
+var trioMixingBase = 17;
+var trioDiscount = 0.8;
+
+// Chorus
+
+
+
+function priceCalculator() {
+    
+    
+}
 
 
 
