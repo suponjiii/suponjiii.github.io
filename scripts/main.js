@@ -50,31 +50,39 @@ scrollSpy(navbar, 2000, 'easeInOutQuint');
 
 
 
+
+// Variables declaration
+var amountAdditionalLines, amountOfChorusLines, acoustic, pop, rock,
+    electro, soloTuningBase, soloTimingBase, soloMixingBase, soloDiscount,
+    duetTuningBase, duetTimingBase, duetMixingBase, duetDiscount, 
+    trioTuningBase, trioTimingBase, trioMixingBase, trioDiscount;
+
+
 // Mixing prices
-var amountAdditionalLines = input;
-var amountOfChorusLines = input;
-var acoustic = 1;
-var pop = 1;
-var rock = 1.2;
-var electro = 1.5;
+var amountAdditionalLines = input,
+    amountOfChorusLines = input,
+    acoustic = 1,
+    pop = 1,
+    rock = 1.2,
+    electro = 1.5;
 
 // Solo
-var soloTuningBase = 7;
-var soloTimingBase = 5;
-var soloMixingBase = 10;
-var soloDiscount = 0.9;
+var soloTuningBase = 7,
+    soloTimingBase = 5,
+    soloMixingBase = 10,
+    soloDiscount = 0.9;
 
 // Duet
-var duetTuningBase = 8;
-var duetTimingBase = 9;
-var duetMixingBase = 12;
-var duetDiscount 0.85;
+var duetTuningBase = 8,
+    duetTimingBase = 9,
+    duetMixingBase = 12,
+    duetDiscount 0.85;
 
 // Trio
-var trioTuningBase = 9;
-var trioTimingBase = 11;
-var trioMixingBase = 17;
-var trioDiscount = 0.8;
+var trioTuningBase = 9,
+    trioTimingBase = 11,
+    trioMixingBase = 17,
+    trioDiscount = 0.8;
 
 // Chorus
 
