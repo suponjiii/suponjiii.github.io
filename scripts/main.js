@@ -60,9 +60,8 @@ var amountAdditionalLines, amountOfChorusLines,
     trioTuningBase, trioTimingBase, trioMixingBase, trioDiscount;
 
 
-var amountOfLines_selection= new Array();
-typeOfMix_selection["TuningOnly"]=0;
-filling_prices["Lemon"]=5;
+// var amountOfLines_selection= new Array();
+// amountOfLines_selection["Solo"]=;
 
 
 
@@ -96,7 +95,7 @@ var trioTuningBase = 9,
 
 
 
-function priceCalculator() {
+function get() {
     
     
 }
