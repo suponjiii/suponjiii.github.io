@@ -162,71 +162,78 @@
         
       <section id="price-calculator" class="xx">
 
-        <div id="typeOfMix" class="field">
+        <div class="field">
           <div class="control">
-            <select>
-              <option>Type of Mix</option>
-              <option>Tuning only</option>
-              <option>Timing only</option>
-              <option>Mix only</option>
-              <option>Complete Mix</option>
-            </select>
+            <label>Type of Mix
+                <select id="typeOfMix">
+                    <option value="TuningOnly">Tuning only</option>
+                    <option value="TimingOnly">Timing only</option>
+                    <option value="MixOnly">Mix only</option>
+                    <option value="CompleteMix">Complete Mix</option>
+                </select>
+            </label>
           </div>
         </div>
 
-        <div id="amountOfLines" class="field">
+        <div class="field">
           <div class="control">
-            <select>
-              <option>Amount of Lines</option>
-              <option>Solo</option>
-              <option>Duet</option>
-              <option>Trio</option>
-              <option>More</option>
-            </select>
+            <label>Amount of Lines
+                <select id="amountOfLines">
+                    <option value="Solo">Solo</option>
+                    <option value="Duet">Duet</option>
+                    <option value="Trio">Trio</option>
+                    <option value="More">More</option>
+                </select>
+            </label>
           </div>
         </div>
 
         <!-- Html form ändern wegen des textfelds -->
         <div class="field">
             <div class="control">
-              <select>
-                <option>More</option>
-                <option>Textfield</option>
-              </select>
+              <label>More
+                <select>
+                    <option>Textfield</option>
+                </select>
+              </label>
             </div>
           </div>
           
-        <div id="genre" class="field">
+        <div class="field">
           <div class="control">
-            <select>
-              <option>Genre</option>
-              <option>Acoustic</option>
-              <option>Electro</option>
-              <option>Pop</option>
-              <option>Rock</option>
-              <option>Other</option>
-            </select>
+            <label>Genre
+                <select id="Genre">
+                    <option value="Acoustic">Acoustic</option>
+                    <option value="Electro">Electro</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
           </div>
         </div>
           
           
           <!-- Html form ändern wegen des textfelds -->
-          <div class="field">
-              <div class="control">
-                <select>
-                  <option>Amount of additional lines</option>
-                  <option>Textfield</option>
-                </select>
-              </div>
+        <div class="field">
+            <div class="control">
+                <label>Amount of additional lines
+                    <select>
+                        <option>-Textfield-</option>
+                    </select>
+                </label>
             </div>
+        </div>
 
             <!-- Html form ändern wegen des textfelds -->
             <div class="field">
               <div class="control">
-                <select>
-                    <option>Textarea with Result</option>
-                  </select>
-                </div>
+                <label>Result
+                    <select>
+                        <option>-Textarea-</option>
+                    </select>
+                </label>
+              </div>
             </div>
           
       </section>

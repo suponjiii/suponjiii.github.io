@@ -51,11 +51,19 @@ scrollSpy(navbar, 2000, 'easeInOutQuint');
 
 
 
+
 // Variables declaration
-var amountAdditionalLines, amountOfChorusLines, acoustic, pop, rock,
-    electro, soloTuningBase, soloTimingBase, soloMixingBase, soloDiscount,
+var amountAdditionalLines, amountOfChorusLines, 
+    acoustic, pop, rock, electro, 
+    soloTuningBase, soloTimingBase, soloMixingBase, soloDiscount,
     duetTuningBase, duetTimingBase, duetMixingBase, duetDiscount, 
     trioTuningBase, trioTimingBase, trioMixingBase, trioDiscount;
+
+
+var amountOfLines_selection= new Array();
+typeOfMix_selection["TuningOnly"]=0;
+filling_prices["Lemon"]=5;
+
 
 
 // Mixing prices
