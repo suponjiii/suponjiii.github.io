@@ -159,80 +159,99 @@
         </section>
 
 
+        
       <!-- class umbenennen -->
-      <section id="price-calculator" class="xx">
-      <div class="box">
-
-        <div class="field">
-          <div class="control">
-            <label>Type of Mix
-                <select id="typeOfMix">
-                    <option value="TuningOnly">Tuning only</option>
-                    <option value="TimingOnly">Timing only</option>
-                    <option value="MixOnly">Mix only</option>
-                    <option value="CompleteMix">Complete Mix</option>
-                </select>
+        <section id="price-calculator" class="section-price-calc">
+            
+            <label class="price-calc-label">
+                <h2 class="title" style="margin-bottom: 15px;">
+                    Price Calculation
+                </h2>
             </label>
-          </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label>Amount of Lines
-                <select id="amountOfLines">
-                    <option value="Solo">Solo</option>
-                    <option value="Duet">Duet</option>
-                    <option value="Trio">Trio</option>
-                    <option value="More">More</option>
-                </select>
-            </label>
-          </div>
-        </div>
-
-        <!-- evtl. HTML Baustein ändern wegen des Textfelds -->
-        <div class="field">
-            <div class="control">
-                More
-                <input type="text" name="more" id="moreAmountOfLines"/>
+            
+            
+        <br>
+        <div class="columns">
+	        
+            <div class="column is-half is-left">
+                <label class="label">Type of Mix</label>
+                        
+                    <div class="select is-fullwidth">
+                        <select id="typeOfMix">
+                            <option value="TuningOnly">Tuning only</option>
+                            <option value="TimingOnly">Timing only</option>
+                            <option value="MixOnly">Mix only</option>
+                            <option value="CompleteMix">Complete Mix</option>
+                        </select>
+                    </div>
             </div>
-          </div>
-          
-        <div class="field">
-          <div class="control">
-            <label>Genre
-                <select id="Genre">
-                    <option value="Acoustic">Acoustic</option>
-                    <option value="Electro">Electro</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Rock">Rock</option>
-                    <option value="Other">Other</option>
-                </select>
-            </label>
-          </div>
-        </div>
-          
-          
-          <!-- evtl. HTML Baustein ändern wegen des Textfelds -->
-        <div class="field">
-            <div class="control">
-                Amount of additional lines
-                <input type="text" name="more" id="amountOfAdditionalLines"/>
+    
+            <div class="column is-half is-left">
+                <label class="label">Gerne</label>
+                        
+                    <div class="select is-fullwidth">
+                        <select id="Genre">
+                            <option value="TuningOnly">Acoustic</option>
+                            <option value="TimingOnly">Electro</option>
+                            <option value="MixOnly">Pop</option>
+                            <option value="CompleteMix">Rock</option>
+                            <option value="CompleteMix">Other</option>
+                        </select>
+                    </div>
             </div>
+            
         </div>
-
-            <!-- evtl. HTML Baustein ändern wegen des Textfelds
-                 Vorschlag: output 
-            -->
-            <div class="field">
-              <div class="control">
-                  Result
-                  <input type="text" name="output" id="output"/>
-              </div>
+            
+        
+        <br>
+        <div class="columns">
+	        
+            <div class="column is-half is-right">
+                <label class="label">Amount of lines</label>
+                    
+                    <div class="select is-fullwidth">
+                        <select id="amountOfLines">
+                            <option value="Solo">Solo</option>
+                            <option value="Duet">Duet</option>
+                            <option value="Trio">Trio</option>
+                            <option value="More">More</option>
+                        </select>
+                    </div>
             </div>
-          
-      </div>
-      </section>
-
+    
+            <div class="column is-half is-left">
+            <label class="label">Amount of Additional Lines</label>
+                        
+                <div class="control is-fullwidth">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            
+        </div>
+        
+            
+        <br>
+        <div class="columns">
+            
+            <div class="column is-half is-left">
+            <label class="label">More</label>
+            
+                <div class="control is-fullwidth">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            
+            <div class="column is-half is-left">
+            <label class="label">Result</label>
+                        
+                <div class="control is-fullwidth">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            
+        </div>
+            
+        
 
         <section id="process" class="section scroll">
           <h2 class="title">How it's going to work</h2>
