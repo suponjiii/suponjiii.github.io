@@ -152,7 +152,7 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
         soloDiscountFinal = 0.9;
     }
     
-    $('#result-field').val(Math.round((((soloTuningFinal + soloTimingFinal + soloMixingFinal + amountOfAdditionalLines) * genreModifier ) * soloDiscountFinal).toFixed(2)));
+    $('#result-field').val((((soloTuningFinal + soloTimingFinal + soloMixingFinal + amountOfAdditionalLines) * genreModifier ) * soloDiscountFinal).toFixed(0));
 }
  
 
