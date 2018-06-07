@@ -101,6 +101,10 @@ $(document).ready(function(){
             chorus(typeOfMix, amountOfAdditionalLines, genre);
         }
     });
+    
+    // $('#more-click').click(function(){
+    
+    
 })
 
 
