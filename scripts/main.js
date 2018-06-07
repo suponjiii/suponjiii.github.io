@@ -87,18 +87,18 @@ $(document).ready(function(){
         var typeOfMix = $('#typeOfMix').val();  
         var genre = $('#genre').val();
         var amountOfLines = $('#amountOfLines').val();
-        var amountOfAdditionalLines = $('#amountOfAdditionalLines').val();
+        var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
         var more = $('#more').val();
         
         //Überprüfe Art des Mixes und rufe passende Funktionen auf (mit passenden Parametern)
         if (amountOfLines === "Solo"){
             solo(typeOfMix, amountOfAdditionalLines, genre);
         } else if (amountOfLines === "Duet") {
-            duet();
+            duet(typeOfMix, amountOfAdditionalLines, genre);
         } else if (amountOfLines === "Trio") {
-            trio();
+            trio(typeOfMix, amountOfAdditionalLines, genre);
         } else {
-            chorus();
+            chorus(typeOfMix, amountOfAdditionalLines, genre);
         }
     });
 })
@@ -118,17 +118,16 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
     //Überprüfe Genre und setze den Modifier passend
     if (genre === "Acoustic") {
         genreModifier = acoustic;
-    } else if (genre = "Rock") {
+    } else if (genre === "Rock") {
         genreModifier = rock;
-    } else if (genre = "Pop") {
+    } else if (genre === "Pop") {
         genreModifier = pop;
-    } else if (genre = "Electro") {
+    } else if (genre === "Electro") {
         genreModifier = electro;
     } else {
         genreModifier = other;
     }
-    
-    //Überprüfe Typ des Mixes und setze Werte passend
+
     if(typeOfMix === "TuningOnly") {
         soloTimingFinal = 0;
         soloMixingFinal = 0;
@@ -136,29 +135,25 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
         soloDiscountFinal = 1;
         
     } else if(typeOfMix === "TimingOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         soloTimingFinal = soloTimingBase;
         soloMixingFinal = 0;
         soloTuningFinal = 0; 
-        soloDiscount = 1;
+        soloDiscountFinal = 1;
         
     } else if(typeOfMix === "MixingOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         soloTimingFinal = 0;
-        soloMixingFinal = soloMixingFinal;
+        soloMixingFinal = soloMixingBase;
         soloTuningFinal = 0;
-        soloDiscount = 1;
+        soloDiscountFinal = 1;
         
     } else {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
-        soloTimingFinal = 0;
-        soloMixingFinal = 0;
-        soloTuningFinal = 0;
-        soloDiscount = 0.9;
+        soloTimingFinal = soloTimingBase;
+        soloMixingFinal = soloMixingBase;
+        soloTuningFinal = soloTuningBase;
+        soloDiscountFinal = 0.9;
     }
     
-    //Setze Result-Feld mit dem berechneten Wert
-     $('#result-field').val(((soloTuningFinal + soloTimingFinal + soloMixingFinal + amountOfAdditionalLines) * genreModifier ) * soloDiscountFinal);
+    $('#result-field').val(Math.round((((soloTuningFinal + soloTimingFinal + soloMixingFinal + amountOfAdditionalLines) * genreModifier ) * soloDiscountFinal).toFixed(2)));
 }
 
 
@@ -170,18 +165,18 @@ function duet(typeOfMix, amountOfAdditionalLines, genre) {
     //Überprüfe Genre und setze den Modifier passend
     if (genre === "Acoustic") {
         genreModifier = acoustic;
-    } else if (genre = "Rock") {
+    } else if (genre === "Rock") {
         genreModifier = rock;
-    } else if (genre = "Pop") {
+    } else if (genre === "Pop") {
         genreModifier = pop;
-    } else if (genre = "Electro") {
+    } else if (genre === "Electro") {
         genreModifier = electro;
     } else {
         genreModifier = other;
     }
     
-    //Überprüfe Typ des Mixes und setze Werte passend
     if(typeOfMix === "TuningOnly") {
+        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         duetTimingFinal = 0;
         duetMixingFinal = 0;
         duetTuningFinal = duetTuningBase;
@@ -192,14 +187,14 @@ function duet(typeOfMix, amountOfAdditionalLines, genre) {
         duetTimingFinal = duetTimingBase;
         duetMixingFinal = 0;
         duetTuningFinal = 0; 
-        duetDiscount = 1;
+        duetDiscountFinal = 1;
         
     } else if(typeOfMix === "MixingOnly") {
         //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         duetTimingFinal = 0;
         duetMixingFinal = duetMixingFinal;
         duetTuningFinal = 0;
-        duetDiscount = 1;
+        duetDiscountFinal = 1;
         
     } else {
         //TODO: Setze Variablen wie oben aber mit den korrekten Werten
@@ -210,7 +205,7 @@ function duet(typeOfMix, amountOfAdditionalLines, genre) {
     }
     
     //Setze Result-Feld mit dem berechneten Wert
-     $('#result-field').val(((duetTuningFinal + duetTimingFinal + duetMixingFinal + amountOfAdditionalLines) * genreModifier ) * duetDiscountFinal);
+     $('#result-field').val((((duetTuningFinal + duetTimingFinal + duetMixingFinal + amountOfAdditionalLines) * genreModifier ) * duetDiscountFinal).toFixed(2));
 }
 
 
@@ -222,12 +217,12 @@ function trio(typeOfMix, amountOfAdditionalLines, genre) {
     //Überprüfe Genre und setze den Modifier passend
     if (genre === "Acoustic") {
         genreModifier = acoustic;
-    } else if (genre = "Rock") {
+    } else if (genre === "Rock") {
         genreModifier = rock;
-    } else if (genre = "Pop") {
+    } else if (genre === "Pop") {
         genreModifier = pop;
     } else if (genre = "Electro") {
-        genreModifier = electro;
+        genreModifier === electro;
     } else {
         genreModifier = other;
     }
