@@ -213,7 +213,8 @@
                                 <option value="Solo">Solo</option>
                                 <option value="Duet">Duet</option>
                                 <option value="Trio">Trio</option>
-                                <option value="more-Click">More</option>
+                                <option value="more-click"
+                                        id="more-click">More</option>
                             </select>
                         </div>
                 </div>
@@ -237,8 +238,8 @@
                     <label class="label">More</label>
                     
                         <div class="control is-fullwidth">
-                            <input class="input is-medium is-disabled" 
-                                   id="input-more" type="text" placeholder="More amount of lines" >
+                            <input class="input is-medium" id="input-moreAmountOfLines" 
+                                   type="text" placeholder="More amount of lines" disabled="" />
                         </div>
                 </div>
 
@@ -246,7 +247,7 @@
                 <label class="label">Result in €</label>
 
                     <div class="control is-fullwidth">
-                        <input class="input is-medium is-focused" id="result-field" type="text" placeholder="Total Price">
+                        <input class="input is-medium is-focused is-loading" id="result-field" type="text" placeholder="Total Price">
                     </div>
                 </div>
 

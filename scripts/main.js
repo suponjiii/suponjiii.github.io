@@ -102,9 +102,29 @@ $(document).ready(function(){
         }
     });
     
-    // $('#more-click').click(function(){
     
-    
+    $('#more-click').click(function(){
+        
+        $( "#input-moreAmountOfLines" ).prop( "disabled", false );
+        
+        // document.getElementById("input-moreAmountOfLines").disabled=false;
+        
+        // var enable = $("#input-moreAmountOfLines");
+        // enable.prop("disabled", false);
+        
+        // $('#input-moreAmountOfLines').prop('disabled', false);
+
+        // $('#input-moreAmountOfLines').removeAttr('disabled');
+        
+        // document.getElementById("input-moreAmountOfLines").disabled = false;
+        
+        // var input = document.querySelector('input-moreAmountOfLines');
+        // input.removeAttribute('disabled');
+        
+        // document.getElementById("input-moreAmountOfLines").disabled = false;
+        
+        // $('#input-moreAmountOfLines').removeAttr("disabled");
+    });  
 })
 
 
