@@ -115,7 +115,6 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
         soloTimingFinal,
         soloMixingFinal;
     
-    //Überprüfe Genre und setze den Modifier passend
     if (genre === "Acoustic") {
         genreModifier = acoustic;
     } else if (genre === "Rock") {
@@ -155,7 +154,7 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
     
     $('#result-field').val(Math.round((((soloTuningFinal + soloTimingFinal + soloMixingFinal + amountOfAdditionalLines) * genreModifier ) * soloDiscountFinal).toFixed(2)));
 }
-
+ 
 
 function duet(typeOfMix, amountOfAdditionalLines, genre) {
     var duetTuningFinal,
