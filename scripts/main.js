@@ -103,9 +103,9 @@ $(document).ready(function(){
     });
     
     
-    $('#more-click').click(function(){
+   // $('#more-click').click(function(){
         
-        $( "#input-moreAmountOfLines" ).prop( "disabled", false );
+        // $( "#input-moreAmountOfLines" ).prop( "disabled", false );
         
         // document.getElementById("input-moreAmountOfLines").disabled=false;
         
@@ -124,7 +124,7 @@ $(document).ready(function(){
         // document.getElementById("input-moreAmountOfLines").disabled = false;
         
         // $('#input-moreAmountOfLines').removeAttr("disabled");
-    });  
+    // });  
 })
 
 
@@ -185,7 +185,6 @@ function duet(typeOfMix, amountOfAdditionalLines, genre) {
         duetTimingFinal,
         duetMixingFinal;
 
-    //Überprüfe Genre und setze den Modifier passend
     if (genre === "Acoustic") {
         genreModifier = acoustic;
     } else if (genre === "Rock") {
@@ -199,36 +198,30 @@ function duet(typeOfMix, amountOfAdditionalLines, genre) {
     }
     
     if(typeOfMix === "TuningOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         duetTimingFinal = 0;
         duetMixingFinal = 0;
         duetTuningFinal = duetTuningBase;
         duetDiscountFinal = 1;
         
     } else if(typeOfMix === "TimingOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         duetTimingFinal = duetTimingBase;
         duetMixingFinal = 0;
         duetTuningFinal = 0; 
         duetDiscountFinal = 1;
         
     } else if(typeOfMix === "MixingOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         duetTimingFinal = 0;
-        duetMixingFinal = duetMixingFinal;
+        duetMixingFinal = duetMixingBase;
         duetTuningFinal = 0;
         duetDiscountFinal = 1;
         
     } else {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
-        duetTimingFinal = 0;
-        duetMixingFinal = 0;
-        duetTuningFinal = 0;
-        duetDiscount = 0.9;
+        duetTimingFinal = duetTimingBase;
+        duetMixingFinal = duetMixingBase;
+        duetTuningFinal = duetTuningBase;
+        duetDiscountFinal = 0.9;
     }
-    
-    //Setze Result-Feld mit dem berechneten Wert
-     $('#result-field').val((((duetTuningFinal + duetTimingFinal + duetMixingFinal + amountOfAdditionalLines) * genreModifier ) * duetDiscountFinal).toFixed(2));
+     $('#result-field').val((((duetTuningFinal + duetTimingFinal + duetMixingFinal + amountOfAdditionalLines) * genreModifier ) * duetDiscountFinal).toFixed(0));
 }
 
 
@@ -237,7 +230,6 @@ function trio(typeOfMix, amountOfAdditionalLines, genre) {
         trioTimingFinal,
         trioMixingFinal;
 
-    //Überprüfe Genre und setze den Modifier passend
     if (genre === "Acoustic") {
         genreModifier = acoustic;
     } else if (genre === "Rock") {
@@ -250,37 +242,31 @@ function trio(typeOfMix, amountOfAdditionalLines, genre) {
         genreModifier = other;
     }
     
-    //Überprüfe Typ des Mixes und setze Werte passend
     if(typeOfMix === "TuningOnly") {
         trioTimingFinal = 0;
         trioMixingFinal = 0;
         trioTuningFinal = trioTuningBase;
-        trioDiscountFinal = 0;
+        trioDiscountFinal = 1;
         
     } else if(typeOfMix === "TimingOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         trioTimingFinal = trioTimingBase;
         trioMixingFinal = 0;
         trioTuningFinal = 0; 
-        trioDiscount = 0;
+        trioDiscountFinal = 1;
         
     } else if(typeOfMix === "MixingOnly") {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
         trioTimingFinal = 0;
-        trioMixingFinal = trioMixingFinal;
+        trioMixingFinal = trioMixingBase;
         trioTuningFinal = 0;
-        trioDiscount = 0;
+        trioDiscountFinal = 1;
         
     } else {
-        //TODO: Setze Variablen wie oben aber mit den korrekten Werten
-        trioTimingFinal = 0;
-        trioMixingFinal = 0;
-        trioTuningFinal = 0;
-        trioDiscount = 0;
+        trioTimingFinal = trioTimingBase;
+        trioMixingFinal = trioMixingBase;
+        trioTuningFinal = trioTuningBase;
+        trioDiscountFinal = 0.8;
     }
-    
-    //Setze Result-Feld mit dem berechneten Wert
-     $('#result-field').val(((trioTuningFinal + trioTimingFinal + trioMixingFinal + amountOfAdditionalLines) * genreModifier ) * trioDiscountFinal);
+     $('#result-field').val((((trioTuningFinal + trioTimingFinal + trioMixingFinal + amountOfAdditionalLines) * genreModifier ) * trioDiscountFinal).toFixed(0));
 }
 
     // function chorus() {
