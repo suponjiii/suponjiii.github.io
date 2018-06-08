@@ -35,7 +35,9 @@ var trioTuningBase = 9,
     trioDiscount = 0.8;
 
 // Chorus
-
+var chorusTuningBase = trioTuningBase + (amountOfChorusLines - 3),
+    chorusTimingBase = trioTimingBase + (amountOfChorusLines - 3),
+    chorusMixingBase = trioMixingBase + (amountOfChorusLines - 3);
 
 
 $(document).ready(function(){
@@ -103,9 +105,9 @@ $(document).ready(function(){
     });
     
     
-   // $('#more-click').click(function(){
+   // $('#chorus-click').click(function(){
         
-        // $( "#input-moreAmountOfLines" ).prop( "disabled", false );
+        // $( "#input-more-AmountOfLines" ).prop( "disabled", false );
         
         // document.getElementById("input-moreAmountOfLines").disabled=false;
         
@@ -272,3 +274,45 @@ function trio(typeOfMix, amountOfAdditionalLines, genre) {
     // function chorus() {
     //TODO: Implementiere Berechnung ähnlich wie solo
     // }
+
+
+function chorus(typeOfMix, amountOfAdditionalLines, genre) {
+    var chorusTuningFinal,
+        chorusTimingFinal,
+        chorusMixingFinal;
+    
+    if (genre === "Acoustic") {
+        genreModifier = acoustic;
+    } else if (genre === "Rock") {
+        genreModifier = rock;
+    } else if (genre === "Pop") {
+        genreModifier = pop;
+    } else if (genre === "Electro") {
+        genreModifier = electro;
+    } else {
+        genreModifier = other;
+    }
+
+    if(typeOfMix === "TuningOnly") {
+        chorusTimingFinal = 0;
+        chorusMixingFinal = 0;
+        chorusTuningFinal = chorusTuningBase;
+        
+    } else if(typeOfMix === "TimingOnly") {
+        chorusTimingFinal = chorusTimingBase;
+        chorusMixingFinal = 0;
+        chorusTuningFinal = 0;
+        
+    } else if(typeOfMix === "MixingOnly") {
+        chorusTimingFinal = 0;
+        chorusMixingFinal = chorusMixingBase;
+        chorusTuningFinal = 0;
+        
+    } else {
+        chorusTimingFinal = chorusTimingBase;
+        chorusMixingFinal = chorusMixingBase;
+        chorusTuningFinal = chorusTuningBase;
+    }
+    
+    $('#result-field').val(((chorusTuningFinal + chorusTimingFinal + chorusMixingFinal + amountOfAdditionalLines) * genreModifier).toFixed(0));
+}
