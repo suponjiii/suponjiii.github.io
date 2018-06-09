@@ -105,28 +105,14 @@ $(document).ready(function(){
     });
     
     
-   // $('#chorus-click').click(function(){
+   $('#amountOfLines').click(function(){
         
-        // $( "#input-more-AmountOfLines" ).prop( "disabled", false );
-        
-        // document.getElementById("input-moreAmountOfLines").disabled=false;
-        
-        // var enable = $("#input-moreAmountOfLines");
-        // enable.prop("disabled", false);
-        
-        // $('#input-moreAmountOfLines').prop('disabled', false);
-
-        // $('#input-moreAmountOfLines').removeAttr('disabled');
-        
-        // document.getElementById("input-moreAmountOfLines").disabled = false;
-        
-        // var input = document.querySelector('input-moreAmountOfLines');
-        // input.removeAttribute('disabled');
-        
-        // document.getElementById("input-moreAmountOfLines").disabled = false;
-        
-        // $('#input-moreAmountOfLines').removeAttr("disabled");
-    // });  
+        if($('#amountOfLines').val() == "Chorus") {
+            $('#input-more-AmountOfLines').attr("disabled", false)
+        } else {
+            $('#input-more-AmountOfLines').attr("disabled", true)
+        }
+    });  
 })
 
 
