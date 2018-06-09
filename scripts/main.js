@@ -85,22 +85,23 @@ $(document).ready(function(){
         
     $('#calculation-button').click(function(){
         
-        //Hole Werte von den Input-Feldern
+        
         var typeOfMix = $('#typeOfMix').val();  
         var genre = $('#genre').val();
+        var genreModifier = getGenre(genre);
         var amountOfLines = $('#amountOfLines').val();
         var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
         var more = $('#more').val();
         
         //Überprüfe Art des Mixes und rufe passende Funktionen auf (mit passenden Parametern)
         if (amountOfLines === "Solo"){
-            solo(typeOfMix, amountOfAdditionalLines, genre);
+            solo(typeOfMix, amountOfAdditionalLines, genreModifier);
         } else if (amountOfLines === "Duet") {
-            duet(typeOfMix, amountOfAdditionalLines, genre);
+            duet(typeOfMix, amountOfAdditionalLines, genreModifier);
         } else if (amountOfLines === "Trio") {
-            trio(typeOfMix, amountOfAdditionalLines, genre);
+            trio(typeOfMix, amountOfAdditionalLines, genreModifier);
         } else {
-            chorus(typeOfMix, amountOfAdditionalLines, genre);
+            chorus(typeOfMix, amountOfAdditionalLines, genreModifier);
         }
     });
     
@@ -121,12 +122,8 @@ var navbar = document.querySelector(".navbar-start");
 scrollSpy(menu, 2000, 'easeInOutQuint');
 scrollSpy(navbar, 2000, 'easeInOutQuint');
 
-
-function solo(typeOfMix, amountOfAdditionalLines, genre) {
-    var soloTuningFinal,
-        soloTimingFinal,
-        soloMixingFinal;
-    
+function getGenre() {
+    let genreModifier;
     if (genre === "Acoustic") {
         genreModifier = acoustic;
     } else if (genre === "Rock") {
@@ -138,6 +135,13 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
     } else {
         genreModifier = other;
     }
+    return genreModifier;
+}
+function solo(typeOfMix, amountOfAdditionalLines, genreModifier) {
+    var soloTuningFinal,
+        soloTimingFinal,
+        soloMixingFinal;
+    
 
     if(typeOfMix === "TuningOnly") {
         soloTimingFinal = 0;
@@ -168,22 +172,10 @@ function solo(typeOfMix, amountOfAdditionalLines, genre) {
 }
  
 
-function duet(typeOfMix, amountOfAdditionalLines, genre) {
+function duet(typeOfMix, amountOfAdditionalLines, genreModifier) {
     var duetTuningFinal,
         duetTimingFinal,
         duetMixingFinal;
-
-    if (genre === "Acoustic") {
-        genreModifier = acoustic;
-    } else if (genre === "Rock") {
-        genreModifier = rock;
-    } else if (genre === "Pop") {
-        genreModifier = pop;
-    } else if (genre === "Electro") {
-        genreModifier = electro;
-    } else {
-        genreModifier = other;
-    }
     
     if(typeOfMix === "TuningOnly") {
         duetTimingFinal = 0;
@@ -209,26 +201,14 @@ function duet(typeOfMix, amountOfAdditionalLines, genre) {
         duetTuningFinal = duetTuningBase;
         duetDiscountFinal = 0.9;
     }
-     $('#result-field').val((((duetTuningFinal + duetTimingFinal + duetMixingFinal + amountOfAdditionalLines) * genreModifier ) * duetDiscountFinal).toFixed(0));
+     $('#result-field').val(Math.round((((duetTuningFinal + duetTimingFinal + duetMixingFinal + amountOfAdditionalLines) * genreModifier ) * duetDiscountFinal)));
 }
 
 
-function trio(typeOfMix, amountOfAdditionalLines, genre) {
+function trio(typeOfMix, amountOfAdditionalLines, genreModifier) {
     var trioTuningFinal,
         trioTimingFinal,
         trioMixingFinal;
-
-    if (genre === "Acoustic") {
-        genreModifier = acoustic;
-    } else if (genre === "Rock") {
-        genreModifier = rock;
-    } else if (genre === "Pop") {
-        genreModifier = pop;
-    } else if (genre = "Electro") {
-        genreModifier === electro;
-    } else {
-        genreModifier = other;
-    }
     
     if(typeOfMix === "TuningOnly") {
         trioTimingFinal = 0;
@@ -257,27 +237,11 @@ function trio(typeOfMix, amountOfAdditionalLines, genre) {
      $('#result-field').val((((trioTuningFinal + trioTimingFinal + trioMixingFinal + amountOfAdditionalLines) * genreModifier ) * trioDiscountFinal).toFixed(0));
 }
 
-    // function chorus() {
-    //TODO: Implementiere Berechnung ähnlich wie solo
-    // }
 
-
-function chorus(typeOfMix, amountOfAdditionalLines, genre) {
+function chorus(typeOfMix, amountOfAdditionalLines, genreModifier) {
     var chorusTuningFinal,
         chorusTimingFinal,
         chorusMixingFinal;
-    
-    if (genre === "Acoustic") {
-        genreModifier = acoustic;
-    } else if (genre === "Rock") {
-        genreModifier = rock;
-    } else if (genre === "Pop") {
-        genreModifier = pop;
-    } else if (genre === "Electro") {
-        genreModifier = electro;
-    } else {
-        genreModifier = other;
-    }
 
     if(typeOfMix === "TuningOnly") {
         chorusTimingFinal = 0;
