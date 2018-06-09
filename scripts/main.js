@@ -202,7 +202,7 @@ function duet(typeOfMix, amountOfAdditionalLines, genreModifier) {
         duetDiscountFinal = 0.9;
     }
     result = calculatePrice(duetTuningFinal, duetTimingFinal, duetMixingFinal, amountAdditionalLines, genreModifier, duetDiscountFinal)
-     $('#result-field').val();
+     $('#result-field').val(result);
 }
 
 
