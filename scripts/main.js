@@ -89,7 +89,6 @@ $(document).ready(function(){
         var genreModifier = getGenre(genre);
         var amountOfLines = $('#amountOfLines').val();
         var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
-        var more = $('#amountOfChorusLines').val();
         
         //Überprüfe Art des Mixes und rufe passende Funktionen auf (mit passenden Parametern)
         if (amountOfLines === "Solo"){
@@ -99,11 +98,16 @@ $(document).ready(function(){
         } else if (amountOfLines === "Trio") {
             trio(typeOfMix, amountOfAdditionalLines, genreModifier);
         } else if (amountOfLines === "Chorus"){
-            if (more == "" || more < 4) {
+            var amountOfChorusLines = $('#amountOfChorusLines').val();
+            if (amountOfChorusLines == "") {
                 $('#amountOfChorusLines').css("border-color", "red")
             } else {
-                $('#amountOfChorusLines').css("border-color", "#dbdbd")
-                chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreModifier);
+                if(parseInt(amountOfChorusLines) < 4) {
+                    $('#amountOfChorusLines').css("border-color", "red")
+                } else {
+                    $('#amountOfChorusLines').css("border-color", "")
+                    chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreModifier);
+                }
             }
             
         }
@@ -270,8 +274,7 @@ function chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreMo
     } else if(typeOfMix === "MixingOnly") {
         chorusTimingFinal = 0;
         chorusMixingFinal = chorusMixingBase;
-        chorusTuningFinal = 0;
-        
+        chorusTuningFinal = 0;    
     } else {
         chorusTimingFinal = chorusTimingBase;
         chorusMixingFinal = chorusMixingBase;
