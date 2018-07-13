@@ -87,6 +87,7 @@ $(document).ready(function(){
         var typeOfMix = $('#typeOfMix').val();  
         var genre = $('#genre').val();
         var genreModifier = getGenre(genre);
+        console.log(genreModifier)
         var amountOfLines = $('#amountOfLines').val();
         var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
         
@@ -130,7 +131,7 @@ var navbar = document.querySelector(".navbar-start");
 scrollSpy(menu, 2000, 'easeInOutQuint');
 scrollSpy(navbar, 2000, 'easeInOutQuint');
 
-function getGenre() {
+function getGenre(genre) {
     let genreModifier;
     if (genre === "Acoustic") {
         genreModifier = acoustic;
@@ -176,7 +177,7 @@ function solo(typeOfMix, amountOfAdditionalLines, genreModifier) {
         soloTuningFinal = soloTuningBase;
         soloDiscountFinal = 0.9;
     }
-    result = calculatePrice(soloTuningFinal, soloTimingFinal, soloMixingFinal, amountAdditionalLines, genreModifier, soloDiscountFinal)
+    result = calculatePrice(soloTuningFinal, soloTimingFinal, soloMixingFinal, amountOfAdditionalLines, genreModifier, soloDiscountFinal)
     $('#result-field').val(result);
 }
  
@@ -211,7 +212,7 @@ function duet(typeOfMix, amountOfAdditionalLines, genreModifier) {
         duetTuningFinal = duetTuningBase;
         duetDiscountFinal = 0.9;
     }
-    result = calculatePrice(duetTuningFinal, duetTimingFinal, duetMixingFinal, amountAdditionalLines, genreModifier, duetDiscountFinal)
+    result = calculatePrice(duetTuningFinal, duetTimingFinal, duetMixingFinal, amountOfAdditionalLines, genreModifier, duetDiscountFinal)
      $('#result-field').val(result);
 }
 
@@ -246,7 +247,7 @@ function trio(typeOfMix, amountOfAdditionalLines, genreModifier) {
         trioTuningFinal = trioTuningBase;
         trioDiscountFinal = 0.8;
     }
-    result = calculatePrice(trioTuningFinal, trioTimingFinal, trioMixingFinal, amountAdditionalLines, genreModifier, trioDiscountFinal)
+    result = calculatePrice(trioTuningFinal, trioTimingFinal, trioMixingFinal, amountOfAdditionalLines, genreModifier, trioDiscountFinal)
      $('#result-field').val(result);
 }
 
