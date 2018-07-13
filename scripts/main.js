@@ -87,7 +87,7 @@ $(document).ready(function(){
         var typeOfMix = $('#typeOfMix').val();  
         var genre = $('#genre').val();
         var genreModifier = getGenre(genre);
-        var amountOfLines = $('#input-more-AmountOfLines').val();
+        var amountOfLines = $('#amountOfLines').val();
         var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
         var more = $('#more').val();
         
@@ -141,7 +141,6 @@ function solo(typeOfMix, amountOfAdditionalLines, genreModifier) {
         soloMixingFinal,
         result;
     
-
     if(typeOfMix === "TuningOnly") {
         soloTimingFinal = 0;
         soloMixingFinal = 0;
@@ -159,6 +158,7 @@ function solo(typeOfMix, amountOfAdditionalLines, genreModifier) {
         soloMixingFinal = soloMixingBase;
         soloTuningFinal = 0;
         soloDiscountFinal = 1;
+        console.log("Mixing is " + soloMixingFinal)
         
     } else {
         soloTimingFinal = soloTimingBase;
@@ -276,5 +276,6 @@ function chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreMo
 }
 
 function calculatePrice(tuning, timing, mixing, lines, genre, discount) {
+    console.log("Tuning: " + tuning + "\nTiming: " + timing + "\nMixing: " + mixing + "\nLines: " + lines + "\nGenre: " + "\nDiscount: "+ discount);
     return Math.round( ( (tuning + timing + mixing + lines) * genre ) * discount)
 }
