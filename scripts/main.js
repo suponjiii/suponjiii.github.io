@@ -89,7 +89,7 @@ $(document).ready(function(){
         var genreModifier = getGenre(genre);
         var amountOfLines = $('#amountOfLines').val();
         var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
-        var more = $('#more').val();
+        var more = $('#amountOfChorusLines').val();
         
         //Überprüfe Art des Mixes und rufe passende Funktionen auf (mit passenden Parametern)
         if (amountOfLines === "Solo"){
@@ -98,8 +98,14 @@ $(document).ready(function(){
             duet(typeOfMix, amountOfAdditionalLines, genreModifier);
         } else if (amountOfLines === "Trio") {
             trio(typeOfMix, amountOfAdditionalLines, genreModifier);
-        } else {
-            chorus(typeOfMix, amountOfLines, amountOfAdditionalLines, genreModifier);
+        } else if (amountOfLines === "Chorus"){
+            if (more == "" || more < 4) {
+                $('#amountOfChorusLines').css("border-color", "red")
+            } else {
+                $('#amountOfChorusLines').css("border-color", "#dbdbd")
+                chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreModifier);
+            }
+            
         }
     });
     
@@ -107,9 +113,9 @@ $(document).ready(function(){
    $('#amountOfLines').click(function(){
         
         if($('#amountOfLines').val() == "Chorus") {
-            $('#input-more-AmountOfLines').attr("disabled", false)
+            $('#amountOfChorusLines').attr("disabled", false)
         } else {
-            $('#input-more-AmountOfLines').attr("disabled", true)
+            $('#amountOfChorusLines').attr("disabled", true)
         }
     });  
 })
@@ -271,7 +277,7 @@ function chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreMo
         chorusMixingFinal = chorusMixingBase;
         chorusTuningFinal = chorusTuningBase;
     }
-    result = calculatePrice(chorusTuningFinal, chorusTimingFinal, chorusMixingFinal, amountAdditionalLines, genreModifier, chorusDiscount)
+    result = calculatePrice(chorusTuningFinal, chorusTimingFinal, chorusMixingFinal, amountOfAdditionalLines, genreModifier, chorusDiscount)
     $('#result-field').val(result);
 }
 
