@@ -12,8 +12,8 @@ var amountAdditionalLines = 0,
     amountOfChorusLines = 0,
     acoustic = 1,
     pop = 1.05,
-    rock = 1.2,
-    electro = 1.5;
+    rock = 1.1,
+    electro = 1.2;
     other = 1;
 
 // Solo
@@ -101,12 +101,13 @@ $(document).ready(function(){
         } else if (amountOfLines === "Chorus"){
             var amountOfChorusLines = $('#amountOfChorusLines').val();
             if (amountOfChorusLines == "") {
-                $('#amountOfChorusLines').css("border-color", "red")
+                handleLinesError()
             } else {
                 if(parseInt(amountOfChorusLines) < 4) {
-                    $('#amountOfChorusLines').css("border-color", "red")
+                    handleLinesError()
                 } else {
                     $('#amountOfChorusLines').css("border-color", "")
+                    $('#faultyChorusLines').css("visibility", "hidden")
                     chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreModifier);
                 }
             }
@@ -130,6 +131,11 @@ var menu = document.querySelector('#sidebar');
 var navbar = document.querySelector(".navbar-start");
 scrollSpy(menu, 2000, 'easeInOutQuint');
 scrollSpy(navbar, 2000, 'easeInOutQuint');
+
+function handleLinesError() {
+    $('#amountOfChorusLines').css("border-color", "red")
+    $('#faultyChorusLines').css("visibility", "visible")
+}
 
 function getGenre(genre) {
     let genreModifier;
@@ -266,26 +272,28 @@ function chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreMo
         chorusTimingFinal = 0;
         chorusMixingFinal = 0;
         chorusTuningFinal = chorusTuningBase;
+        chorusDiscount = 1;
         
     } else if(typeOfMix === "TimingOnly") {
         chorusTimingFinal = chorusTimingBase;
         chorusMixingFinal = 0;
         chorusTuningFinal = 0;
-        
+        chorusDiscount = 1;
     } else if(typeOfMix === "MixingOnly") {
         chorusTimingFinal = 0;
         chorusMixingFinal = chorusMixingBase;
         chorusTuningFinal = 0;    
+        chorusDiscount = 1;
     } else {
         chorusTimingFinal = chorusTimingBase;
         chorusMixingFinal = chorusMixingBase;
         chorusTuningFinal = chorusTuningBase;
+        chorusDiscount = 0.9;
     }
     result = calculatePrice(chorusTuningFinal, chorusTimingFinal, chorusMixingFinal, amountOfAdditionalLines, genreModifier, chorusDiscount)
     $('#result-field').val(result);
 }
 
 function calculatePrice(tuning, timing, mixing, lines, genre, discount) {
-    console.log("Tuning: " + tuning + "\nTiming: " + timing + "\nMixing: " + mixing + "\nLines: " + lines + "\nGenre: " + "\nDiscount: "+ discount);
     return Math.round( ( (tuning + timing + mixing + lines) * genre ) * discount)
 }

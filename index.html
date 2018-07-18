@@ -124,7 +124,7 @@
                       <th>8€</th>
                       <th>9€</th>
                       <th>12€</th>
-                      <th>25€</th>
+                      <th>26€</th>
                     </tr>
                   </tbody>
                   <tbody>
@@ -162,13 +162,15 @@
 
           <!-- class umbenennen -->
             <section id="price-calculator" class="section-price-calc">
-
                 <label class="price-calc-label">
                     <h2 class="title" style="margin-bottom: 15px;">
                         Price Calculation
                     </h2>
                 </label>
-
+                <p>
+                  Use this to calculate a rough estimation of what it <i>might</i> cost. <br>
+                  Example: A chorus with 5 mains, 5 harms and 2 Adlibs would have 5 in "Amount of Chorus Lines" and 6 in "Amount of Additional Lines."
+                </p>
 
             <br>
             <div class="columns">
@@ -239,6 +241,7 @@
                         <div class="control is-fullwidth">
                             <input class="input is-medium" id="amountOfChorusLines" 
                                    type="text" placeholder="Amount of Chorus Lines" disabled />
+                                   <p id="faultyChorusLines" style="color: red; visibility: hidden; font-size: 16px;">Please enter a number bigger than 3.</p>
                         </div>
                 </div>
 
@@ -254,7 +257,7 @@
 
                 
             <br> 
-            <div class="columns">
+            <div class="columns" style="position: relative; bottom: 25px;">
                 
                 <div class="column is-one-quarter">
                     <div class="button is-paddingless">
@@ -263,6 +266,16 @@
                 </div>
                  
             </div>
+            <article>
+                <div class="message-header">
+                    <p>Important!</p>
+                  </div>
+              <div class="message-body">
+                These prices are only an orientation for you so please take these values with a grain of salt! They might not represent the definitive value that I might charge you. 
+                <br>Especially with chorus projects, it's always hard to calculate with a formula so please do talk to me about the price. 
+              </div>
+            </article>
+            </section>
 
 
             <section id="process" class="section scroll">
