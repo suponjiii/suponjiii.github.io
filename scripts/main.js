@@ -89,8 +89,22 @@ $(document).ready(function(){
         var genreModifier = getGenre(genre);
         console.log(genreModifier)
         var amountOfLines = $('#amountOfLines').val();
-        var amountOfAdditionalLines = parseInt($('#amountOfAdditionalLines').val())||0;
+        var amountOfAdditionalLines = $('#amountOfAdditionalLines').val();
         
+        if(amountOfAdditionalLines === "") {
+            $('#amountOfAdditionalLines').css("border-color", "")
+            $('#additionalError').css("visibility", "hidden")
+            amountOfAdditionalLines = 0; 
+        } else if (isNaN(amountOfAdditionalLines)) {
+            $('#amountOfAdditionalLines').css("border-color", "red")
+            $('#additionalError').css("visibility", "visible")
+            return;
+        } else {
+            $('#amountOfAdditionalLines').css("border-color", "")
+            $('#additionalError').css("visibility", "hidden")
+            amountOfAdditionalLines = parseInt(amountOfAdditionalLines)
+        }
+
         //Überprüfe Art des Mixes und rufe passende Funktionen auf (mit passenden Parametern)
         if (amountOfLines === "Solo"){
             solo(typeOfMix, amountOfAdditionalLines, genreModifier);
@@ -100,7 +114,7 @@ $(document).ready(function(){
             trio(typeOfMix, amountOfAdditionalLines, genreModifier);
         } else if (amountOfLines === "Chorus"){
             var amountOfChorusLines = $('#amountOfChorusLines').val();
-            if (amountOfChorusLines == "") {
+            if (amountOfChorusLines == "" || isNaN(amountOfChorusLines)) {
                 handleLinesError()
             } else {
                 if(parseInt(amountOfChorusLines) < 4) {

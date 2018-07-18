@@ -161,7 +161,7 @@
 
 
           <!-- class umbenennen -->
-            <section id="price-calculator" class="section-price-calc">
+            <section id="price-calculator" class="section-price-calc section scroll">
                 <label class="price-calc-label">
                     <h2 class="title" style="margin-bottom: 15px;">
                         Price Calculation
@@ -227,6 +227,7 @@
                         <input class="input is-medium" type="text" placeholder="Text input" 
                                id="amountOfAdditionalLines">
                     </div>
+                    <p id="additionalError" style="visibility: hidden; height: 0; font-size: 16px; color: red;">Please enter a number or leave it empty.</p>
                 </div>
 
             </div>
@@ -249,7 +250,7 @@
                 <label class="label">Result in €</label>
 
                     <div class="control is-fullwidth">
-                        <input class="input is-medium is-focused is-loading" id="result-field" type="text" placeholder="Total Price">
+                        <input class="input is-medium is-focused is-loading" id="result-field" type="text" placeholder="Total Price" readonly>
                     </div>
                 </div>
 
