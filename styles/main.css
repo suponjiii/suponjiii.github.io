@@ -32,6 +32,28 @@ section {
   margin-top: 60px;
 }
 
+
+/* Baustelle */
+
+.section-price-calc {
+  position: centered;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+.price-calc-label {
+    
+}
+
+.box {
+    width: 450px;
+    background: #fafafa;
+}
+
+
+/* Ende */
+
+
 .navbar-item {
     transition: all 400ms;
 }
