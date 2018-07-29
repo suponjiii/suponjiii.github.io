@@ -273,9 +273,9 @@ function trio(typeOfMix, amountOfAdditionalLines, genreModifier) {
 
 
 function chorus(typeOfMix, amountOfChorusLines, amountOfAdditionalLines, genreModifier) {
-    let chorusTuningBase = trioTuningBase + (amountOfChorusLines - 3),
-        chorusTimingBase = trioTimingBase + (amountOfChorusLines - 3),
-        chorusMixingBase = trioMixingBase + (amountOfChorusLines - 3),
+    let chorusTuningBase = 1.5 * (trioTuningBase + (amountOfChorusLines - 3)),
+        chorusTimingBase = 1.5 * (trioTimingBase + (amountOfChorusLines - 3)),
+        chorusMixingBase = 1.5 * (trioMixingBase + (amountOfChorusLines - 3)),
         chorusDiscount = 1,
         chorusTuningFinal,
         chorusTimingFinal,
