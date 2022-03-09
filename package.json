@@ -1,0 +1,30 @@
+{
+  "name": "suponjiii.github.io",
+  "version": "1.0.0",
+  "description": "\"# suponjiii.github.io\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanleminh/suponjiii.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanleminh/suponjiii.github.io/issues"
+  },
+  "homepage": "https://github.com/stefanleminh/suponjiii.github.io#readme",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^2.2.4",
+    "vite": "^2.8.6",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}
