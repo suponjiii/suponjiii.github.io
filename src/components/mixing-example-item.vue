@@ -1,10 +1,7 @@
 <template>
   <div class="column is-half">
     <div class="card">
-      <header
-        class="card-header"
-        @click="isActive = !isActive"
-      >
+      <header class="card-header" @click="isActive = !isActive">
         <p class="card-header-title">
           {{ mixingExample.voiceType }}
         </p>
@@ -19,28 +16,15 @@
           @click.prevent="toggleBody"
         >
           <span class="icon">
-            <i
-              class="fas fa-angle-down"
-              aria-hidden="true"
-            />
+            <i class="fas fa-angle-down" aria-hidden="true" />
           </span>
         </a>
       </header>
-      <slide-up-down
-        v-model="isActive"
-        :duration="500"
-      >
-        <div
-          ref="articleBody"
-          class="card-content"
-        >
+      <slide-up-down v-model="isActive" :duration="500">
+        <div ref="articleBody" class="card-content">
           <div class="content">
             <div class="responsive-video">
-              <iframe
-                width="570"
-                height="465"
-                :src="mixingExample.url"
-              />
+              <iframe width="570" height="465" :src="mixingExample.url" />
             </div>
           </div>
         </div>

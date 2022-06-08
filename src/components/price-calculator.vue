@@ -1,22 +1,16 @@
 <template>
-  <section
-    id="price-calculator"
-    class="section-price-calc section scroll"
-  >
+  <section id="price-calculator" class="section-price-calc section scroll">
     <label class="price-calc-label">
-      <h2
-        class="title"
-        style="margin-bottom: 15px"
-      >Price Calculation</h2>
+      <h2 class="title" style="margin-bottom: 15px">Price Calculation</h2>
     </label>
     <p>
       Use this to calculate a rough estimation of what it <i>might</i> cost.
-      <br>
+      <br />
       Example: A chorus with 5 mains, 5 harms and 2 Adlibs would have 5 in
       "Amount of Chorus Lines" and 6 in "Amount of Additional Lines."
     </p>
 
-    <br>
+    <br />
     <div class="columns">
       <div class="column is-half is-left">
         <label class="label">Type of Mix</label>
@@ -64,7 +58,7 @@
       </div>
     </div>
 
-    <br>
+    <br />
     <div class="columns">
       <div class="column is-half is-right">
         <label class="label">Amount of Lines</label>
@@ -96,7 +90,7 @@
             class="input is-medium"
             type="text"
             placeholder="Text input"
-          >
+          />
         </div>
         <p
           id="additionalError"
@@ -107,7 +101,7 @@
       </div>
     </div>
 
-    <br>
+    <br />
     <div class="columns">
       <div class="column is-half is-left">
         <label class="label">Amount of Chorus Lines</label>
@@ -119,7 +113,7 @@
             type="text"
             placeholder="Amount of Chorus Lines"
             disabled
-          >
+          />
           <p
             id="faultyChorusLines"
             style="color: red; visibility: hidden; font-size: 16px"
@@ -139,22 +133,16 @@
             type="text"
             placeholder="Total Price"
             readonly
-          >
+          />
         </div>
       </div>
     </div>
 
-    <br>
-    <div
-      class="columns"
-      style="position: relative; bottom: 25px"
-    >
+    <br />
+    <div class="columns" style="position: relative; bottom: 25px">
       <div class="column is-one-quarter">
         <div class="button is-paddingless">
-          <a
-            id="calculation-button"
-            class="button is-dark"
-          >Calculate</a>
+          <a id="calculation-button" class="button is-dark">Calculate</a>
         </div>
       </div>
     </div>
@@ -166,7 +154,7 @@
         These prices are only an orientation for you so please take these values
         with a grain of salt! They might not represent the definitive value that
         I might charge you.
-        <br>Especially with chorus projects, it's always hard to calculate
+        <br />Especially with chorus projects, it's always hard to calculate
         with a formula so please do talk to me about the price.
       </div>
     </article>
