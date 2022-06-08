@@ -71,8 +71,4 @@ const props = defineProps({
 .activeToggle {
   transform: rotate(180deg);
 }
-
-.card-content {
-  transition: height 250ms ease;
-}
 </style>

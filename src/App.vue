@@ -28,6 +28,9 @@ import Footer from './views/page-footer.vue'
   font-family: 'Abel', sans-serif;
   overflow: hidden;
 }
+#main {
+  min-height: 80vh;
+}
 p {
   font-size: 20px;
 }
