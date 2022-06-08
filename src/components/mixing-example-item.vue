@@ -26,30 +26,34 @@
           </span>
         </a>
       </header>
-      <div
-        ref="articleBody"
-        :style="{ height }"
-        class="card-content"
+      <slide-up-down
+        v-model="isActive"
+        :duration="500"
       >
-        <div class="content">
-          <div class="responsive-video">
-            <iframe
-              width="570"
-              height="465"
-              :src="mixingExample.url"
-            />
+        <div
+          ref="articleBody"
+          class="card-content"
+        >
+          <div class="content">
+            <div class="responsive-video">
+              <iframe
+                width="570"
+                height="465"
+                :src="mixingExample.url"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </slide-up-down>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import SlideUpDown from 'vue3-slide-up-down'
 
 const isActive = ref(false)
-const height = ref('')
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
