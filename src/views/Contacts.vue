@@ -12,12 +12,12 @@
       </a>
       <p style="display: inline">@SUPONJI123</p>
       <br />
-      <i class="fas fa-envelope-open"></i>
+      <a href="mailto:suponjiii@gmail.com">
+        <i class="fas fa-envelope-open"></i>
+      </a>
       <p style="display: inline">suponjiii@gmail.com</p>
       <br />
-      <a href="mailto:suponjiii@gmail.com">
-        <i class="fab fa-discord"></i>
-      </a>
+      <i class="fab fa-discord"></i>
       <p style="display: inline">
         Please ask me about this through above means!
       </p>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style>
@@ -56,5 +56,8 @@ export default {};
 
 svg.fa-discord:hover {
   transform: scale(1.3) !important;
+}
+.icons svg {
+  margin-right: 50px;
 }
 </style>

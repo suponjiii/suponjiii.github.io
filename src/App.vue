@@ -1,20 +1,20 @@
 <template>
   <Navbar></Navbar>
   <div class="container">
-    <div class="columns">
-      <div id="main">
-        <Transition>
-          <router-view></router-view>
-        </Transition>
-      </div>
+    <div id="main">
+      <router-view v-slot="{ Component }">
+        <transition mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
   <Footer></Footer>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import Navbar from './views/Navbar.vue'
+import Footer from './views/Footer.vue'
 
 export default {
   name: 'App',
@@ -31,6 +31,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  font-family: 'Abel', sans-serif;
+  overflow: hidden;
   font-family: 'Abel', sans-serif;
   overflow: hidden;
 }

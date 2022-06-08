@@ -1,13 +1,11 @@
 <template>
   <section id="home" class="section">
-    <transition @enter="enter">
-      <h1 class="title" id="title">
-        <span class="text-wrapper">
-          <span class="letters">suponjiii Mixing</span>
-          <span class="line"></span>
-        </span>
-      </h1>
-    </transition>
+    <h1 class="title" id="title">
+      <span class="text-wrapper">
+        <span class="letters" v-html="titleLetters"></span>
+        <span class="line"></span>
+      </span>
+    </h1>
 
     <p class="subtitle">
       Bad at mixing and have no friends to bother about it?
@@ -30,37 +28,43 @@
 </template>
 
 <script>
-// import anime from "animejs/lib/anime.es.js";
-// export default {
-//   methods: {
-//     enter(el, done) {
-//       console.log("Hello!");
-//       anime
-//         .timeline({ loop: false })
-//         .add({
-//           targets: el,
-//           scaleX: [0, 1],
-//           opacity: [0.5, 1],
-//           easing: "easeInOutExpo",
-//           duration: 900,
-//         })
-//         .add({
-//           targets: "#title .letter",
-//           opacity: [0, 1],
-//           translateX: [40, 0],
-//           translateZ: 0,
-//           scaleX: [0.3, 1],
-//           easing: "easeOutExpo",
-//           duration: 800,
-//           offset: "-=600",
-//           delay: function (el, i) {
-//             return 150 + 25 * i;
-//           },
-//         });
-//       done();
-//     },
-//   },
-// };
+import anime from 'animejs/lib/anime.es.js'
+export default {
+  mounted () {
+    const textWrapper = document.querySelector('#title .letters')
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    )
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: '#title .line',
+        scaleX: [0, 1],
+        opacity: [0.5, 1],
+        easing: 'easeInOutExpo',
+        duration: 900
+      })
+      .add({
+        targets: '#title .letter',
+        opacity: [0, 1],
+        translateX: [40, 0],
+        translateZ: 0,
+        scaleX: [0.3, 1],
+        easing: 'easeOutExpo',
+        duration: 800,
+        offset: '-=600',
+        delay: function (el, i) {
+          return 150 + 25 * i
+        }
+      })
+  },
+  data () {
+    return {
+      titleLetters: 'suponjiii Mixing'
+    }
+  }
+}
 </script>
 
 <style>
