@@ -1,21 +1,27 @@
 <template>
-  <section id="home" class="section">
-    <h1 class="title" id="title">
+  <section
+    id="home"
+    class="section"
+  >
+    <h1
+      id="title"
+      class="title"
+    >
       <span class="text-wrapper">
-        <span class="letters" v-html="titleLetters"></span>
-        <span class="line"></span>
+        <span class="letters">{{ titleLetters }}</span>
+        <span class="line" />
       </span>
     </h1>
 
     <p class="subtitle">
       Bad at mixing and have no friends to bother about it?
-      <br />
-      Still want to make your cover as good as possible mixing-wise? <br />
+      <br>
+      Still want to make your cover as good as possible mixing-wise? <br>
       Got little to no money to commission?
     </p>
     <p>
       Well, no matter how you’ve found your way here…
-      <br />
+      <br>
       Welcome to this humble place where you might receive what you’re looking
       for! I am suponjiii/stef/knockyourselfout and you might know how hard
       student life can be money-wise- I digress. Basically, I take on mixing
@@ -27,44 +33,40 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import anime from 'animejs/lib/anime.es.js'
-export default {
-  mounted () {
-    const textWrapper = document.querySelector('#title .letters')
-    textWrapper.innerHTML = textWrapper.textContent.replace(
-      /\S/g,
-      "<span class='letter'>$&</span>"
-    )
-    anime
-      .timeline({ loop: false })
-      .add({
-        targets: '#title .line',
-        scaleX: [0, 1],
-        opacity: [0.5, 1],
-        easing: 'easeInOutExpo',
-        duration: 900
-      })
-      .add({
-        targets: '#title .letter',
-        opacity: [0, 1],
-        translateX: [40, 0],
-        translateZ: 0,
-        scaleX: [0.3, 1],
-        easing: 'easeOutExpo',
-        duration: 800,
-        offset: '-=600',
-        delay: function (el, i) {
-          return 150 + 25 * i
-        }
-      })
-  },
-  data () {
-    return {
-      titleLetters: 'suponjiii Mixing'
-    }
-  }
-}
+import { onMounted, ref } from 'vue'
+
+const titleLetters = ref('suponjiii Mixing')
+onMounted(() => {
+  const textWrapper = document.querySelector('#title .letters')
+  textWrapper.innerHTML = textWrapper.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  )
+  anime
+    .timeline({ loop: false })
+    .add({
+      targets: '#title .line',
+      scaleX: [0, 1],
+      opacity: [0.5, 1],
+      easing: 'easeInOutExpo',
+      duration: 900
+    })
+    .add({
+      targets: '#title .letter',
+      opacity: [0, 1],
+      translateX: [40, 0],
+      translateZ: 0,
+      scaleX: [0.3, 1],
+      easing: 'easeOutExpo',
+      duration: 800,
+      offset: '-=600',
+      delay: function (el, i) {
+        return 150 + 25 * i
+      }
+    })
+})
 </script>
 
 <style>

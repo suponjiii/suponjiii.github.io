@@ -3,15 +3,13 @@
     <div class="container">
       <div class="content">
         suponjiii's Mixing
-        <br />
+        <br>
         Website made by suponjiii
       </div>
     </div>
   </footer>
 </template>
 
-<script>
-export default {}
-</script>
+<script setup></script>
 
 <style></style>

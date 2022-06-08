@@ -1,41 +1,48 @@
 <template>
-  <section id="contacts" class="section scroll">
-    <h2 class="title">How to contact me</h2>
+  <section
+    id="contacts"
+    class="section scroll"
+  >
+    <h2 class="title">
+      How to contact me
+    </h2>
     <div class="icons">
       <a href="https://www.youtube.com/user/suponjiii">
-        <i class="fab fa-youtube"></i>
+        <i class="fab fa-youtube" />
       </a>
-      <p style="display: inline">user/suponjiii</p>
-      <br />
+      <p style="display: inline">
+        user/suponjiii
+      </p>
+      <br>
       <a href="https://twitter.com/SUPONJI123">
-        <i class="fab fa-twitter"></i>
+        <i class="fab fa-twitter" />
       </a>
-      <p style="display: inline">@SUPONJI123</p>
-      <br />
+      <p style="display: inline">
+        @SUPONJI123
+      </p>
+      <br>
       <a href="mailto:suponjiii@gmail.com">
-        <i class="fas fa-envelope-open"></i>
+        <i class="fas fa-envelope-open" />
       </a>
-      <p style="display: inline">suponjiii@gmail.com</p>
-      <br />
-      <i class="fab fa-discord"></i>
+      <p style="display: inline">
+        suponjiii@gmail.com
+      </p>
+      <br>
+      <i class="fab fa-discord" />
       <p style="display: inline">
         Please ask me about this through above means!
       </p>
     </div>
     <p>
       I would certainly prefer over Twitter or E-Mail.
-      <br />
-      <strong
-        >Please do not request commissions via Youtube as I don't seem to get
-        notifications for messages!</strong
-      >
+      <br>
+      <strong>Please do not request commissions via Youtube as I don't seem to get
+        notifications for messages!</strong>
     </p>
   </section>
 </template>
 
-<script>
-export default {}
-</script>
+<script setup></script>
 
 <style>
 #contacts svg {

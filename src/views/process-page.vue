@@ -1,6 +1,11 @@
 <template>
-  <section id="process" class="section scroll">
-    <h2 class="title">How it's going to work</h2>
+  <section
+    id="process"
+    class="section scroll"
+  >
+    <h2 class="title">
+      How it's going to work
+    </h2>
     <ol>
       <li>You contact me through one of the methods mentioned below</li>
       <li>
@@ -29,9 +34,6 @@
   </section>
 </template>
 
-<script>
-export default {};
-</script>
+<script setup></script>
 
-<style>
-</style>
+<style></style>

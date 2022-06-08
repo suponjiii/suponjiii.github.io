@@ -1,8 +1,13 @@
 <template>
   <div class="column is-half">
     <div class="card">
-      <header class="card-header" @click="isActive = !isActive">
-        <p class="card-header-title">{{ mixingExample.voiceType }}</p>
+      <header
+        class="card-header"
+        @click="isActive = !isActive"
+      >
+        <p class="card-header-title">
+          {{ mixingExample.voiceType }}
+        </p>
         <p class="card-header-title is-pulled-right">
           {{ mixingExample.title }}
         </p>
@@ -14,15 +19,25 @@
           @click.prevent="toggleBody"
         >
           <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
+            <i
+              class="fas fa-angle-down"
+              aria-hidden="true"
+            />
           </span>
         </a>
       </header>
-      <div ref="articleBody" :style="{ height }" class="card-content">
+      <div
+        ref="articleBody"
+        :style="{ height }"
+        class="card-content"
+      >
         <div class="content">
           <div class="responsive-video">
-            <iframe width="570" height="465" v-bind:src="mixingExample.url">
-            </iframe>
+            <iframe
+              width="570"
+              height="465"
+              :src="mixingExample.url"
+            />
           </div>
         </div>
       </div>
@@ -30,19 +45,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ['mixingExample'],
-  data () {
-    return {
-      isActive: false,
-      height: '',
-      show: true,
-      timeout: null
-    }
-  },
-  methods: {}
-}
+<script setup>
+import { ref } from 'vue'
+
+const isActive = ref(false)
+const height = ref('')
+
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  mixingExample: {
+    type: Object,
+    required: true
+  }
+})
 </script>
 
 <style lang="scss">

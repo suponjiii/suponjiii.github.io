@@ -1,8 +1,15 @@
 <template>
-  <section id="questions" class="section scroll">
-    <h2 class="title">Questions</h2>
+  <section
+    id="questions"
+    class="section scroll"
+  >
+    <h2 class="title">
+      Questions
+    </h2>
     <div style="margin-bottom: 70px">
-      <h4 class="subtitle">Wait, so how am I going to pay you again-</h4>
+      <h4 class="subtitle">
+        Wait, so how am I going to pay you again-
+      </h4>
       <p>
         Paypal preferably! If you have any other suggestions, feel free to tell
         me about them though that’s the easiest and most used one around here so
@@ -12,7 +19,9 @@
       </p>
     </div>
     <div style="margin-bottom: 70px">
-      <h4 class="subtitle">Do you collaborate with other mixers?</h4>
+      <h4 class="subtitle">
+        Do you collaborate with other mixers?
+      </h4>
       <p>
         Sure can do! Especially if the work’s divided then (Tuning, Timing,
         Mixing), we can talk about that of course!
@@ -32,9 +41,6 @@
   </section>
 </template>
 
-<script>
-export default {};
-</script>
+<script setup></script>
 
-<style>
-</style>
+<style></style>

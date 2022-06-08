@@ -1,5 +1,5 @@
 <template>
-  <Navbar></Navbar>
+  <Navbar />
   <div class="container">
     <div id="main">
       <router-view v-slot="{ Component }">
@@ -9,20 +9,12 @@
       </router-view>
     </div>
   </div>
-  <Footer></Footer>
+  <Footer />
 </template>
 
-<script>
-import Navbar from './views/Navbar.vue'
-import Footer from './views/Footer.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Navbar,
-    Footer
-  }
-}
+<script setup>
+import Navbar from './views/nav-bar.vue'
+import Footer from './views/page-footer.vue'
 </script>
 
 <style lang="scss">
