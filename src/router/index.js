@@ -5,6 +5,7 @@ import Contacts from '../views/contacts-page.vue'
 import Questions from '../views/questions-page.vue'
 import Process from '../views/process-page.vue'
 import About from '../views/about-page.vue'
+import LineGuidelines from '../views/line-guidelines-page.vue'
 
 const routes = [
   {
@@ -21,6 +22,11 @@ const routes = [
     path: '/process',
     name: 'Process',
     component: Process
+  },
+  {
+    path: '/line-guidelines',
+    name: 'LineGuidelines',
+    component: LineGuidelines
   },
   {
     path: '/contacts',

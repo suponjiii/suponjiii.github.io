@@ -1,12 +1,6 @@
 <template>
-  <section
-    id="home"
-    class="section"
-  >
-    <h1
-      id="title"
-      class="title"
-    >
+  <section id="home" class="section">
+    <h1 id="title" class="title">
       <span class="text-wrapper">
         <span class="letters">{{ titleLetters }}</span>
         <span class="line" />
@@ -15,58 +9,52 @@
 
     <p class="subtitle">
       Bad at mixing and have no friends to bother about it?
-      <br>
-      Still want to make your cover as good as possible mixing-wise? <br>
-      Got little to no money to commission?
+      <br />
+      Still want to make your cover as good as possible mixing-wise? <br />
     </p>
     <p>
       Well, no matter how you’ve found your way here…
-      <br>
-      Welcome to this humble place where you might receive what you’re looking
-      for! I am suponjiii/stef/knockyourselfout and you might know how hard
-      student life can be money-wise- I digress. Basically, I take on mixing
-      commissions! But the suggested prices here are really nothing more than
-      suggestions. If you’re a student as poor as me, you’ll probably don’t have
-      much money either - Which is fine! Just talk to me and I’m sure we’ll find
-      a price we can agree on! For more, just give this whole site a go!
+      <br />
+      I do mixing commissions! Please check out the pricing page for
+      <i>a rough idea</i> of the price - I am always open to negotiate!
     </p>
   </section>
 </template>
 
 <script setup>
-import anime from 'animejs/lib/anime.es.js'
-import { onMounted, ref } from 'vue'
+import anime from "animejs/lib/anime.es.js";
+import { onMounted, ref } from "vue";
 
-const titleLetters = ref('suponjiii Mixing')
+const titleLetters = ref("suponjiii Mixing");
 onMounted(() => {
-  const textWrapper = document.querySelector('#title .letters')
+  const textWrapper = document.querySelector("#title .letters");
   textWrapper.innerHTML = textWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
-  )
+  );
   anime
     .timeline({ loop: false })
     .add({
-      targets: '#title .line',
+      targets: "#title .line",
       scaleX: [0, 1],
       opacity: [0.5, 1],
-      easing: 'easeInOutExpo',
-      duration: 900
+      easing: "easeInOutExpo",
+      duration: 900,
     })
     .add({
-      targets: '#title .letter',
+      targets: "#title .letter",
       opacity: [0, 1],
       translateX: [40, 0],
       translateZ: 0,
       scaleX: [0.3, 1],
-      easing: 'easeOutExpo',
+      easing: "easeOutExpo",
       duration: 800,
-      offset: '-=600',
+      offset: "-=600",
       delay: function (el, i) {
-        return 150 + 25 * i
-      }
-    })
-})
+        return 150 + 25 * i;
+      },
+    });
+});
 </script>
 
 <style>

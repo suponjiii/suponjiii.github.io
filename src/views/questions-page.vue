@@ -1,15 +1,8 @@
 <template>
-  <section
-    id="questions"
-    class="section scroll"
-  >
-    <h2 class="title">
-      Questions
-    </h2>
+  <section id="questions" class="section scroll">
+    <h2 class="title">Questions</h2>
     <div style="margin-bottom: 70px">
-      <h4 class="subtitle">
-        Wait, so how am I going to pay you again-
-      </h4>
+      <h4 class="subtitle">Wait, so how am I going to pay you again-</h4>
       <p>
         Paypal preferably! If you have any other suggestions, feel free to tell
         me about them though that’s the easiest and most used one around here so
@@ -18,24 +11,16 @@
         anyway)
       </p>
     </div>
-    <div style="margin-bottom: 70px">
-      <h4 class="subtitle">
-        Do you collaborate with other mixers?
-      </h4>
-      <p>
-        Sure can do! Especially if the work’s divided then (Tuning, Timing,
-        Mixing), we can talk about that of course!
-      </p>
-    </div>
 
     <div style="margin-bottom: 70px">
       <h4 class="subtitle">
         I really like this website! Can I have one of my own?
       </h4>
       <p>
-        For sure! I am studying Computer Science and have experience in Web
-        Development. Just shoot me a message and we might be able to arrange
-        something!
+        Yes! However, if you generally just want something fancier than a Google
+        Docs page and don't really want a specific design, it's probably cheaper
+        to go with services like <a href="https://carrd.co">carrd</a>. But if
+        your needs go beyond that, feel free to hit me up!
       </p>
     </div>
   </section>

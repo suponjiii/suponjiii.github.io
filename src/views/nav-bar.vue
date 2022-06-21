@@ -1,16 +1,9 @@
 <template>
-  <nav
-    class="navbar"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a
-        class="navbar-item"
-        href="/"
-      >
+      <router-link class="navbar-item" to="/">
         <h3>Home</h3>
-      </a>
+      </router-link>
 
       <div class="navbar-burger">
         <span />
@@ -21,48 +14,28 @@
 
     <div class="navbar-menu">
       <div class="navbar-start">
-        <router-link
-          class="navbar-item"
-          to="/pricing"
-        >
-          Pricing
+        <router-link class="navbar-item" to="/pricing"> Pricing </router-link>
+        <router-link class="navbar-item" to="/process"> Process </router-link>
+        <router-link class="navbar-item" to="/line-guidelines">
+          Line Guidelines
         </router-link>
-        <router-link
-          class="navbar-item"
-          to="/process"
-        >
-          Process
-        </router-link>
-        <router-link
-          class="navbar-item"
-          to="/contacts"
-        >
-          Contacts
-        </router-link>
-        <router-link
-          class="navbar-item"
-          to="/questions"
-        >
+        <router-link class="navbar-item" to="/contacts"> Contacts </router-link>
+        <router-link class="navbar-item" to="/questions">
           Questions
         </router-link>
-        <router-link
-          class="navbar-item"
-          to="/about"
-        >
-          About me
-        </router-link>
+        <router-link class="navbar-item" to="/about"> About me </router-link>
       </div>
     </div>
     <div class="navbar-end is-hidden-mobile">
+      <a class="navbar-item" href="https://www.youtube.com/user/suponjiii">
+        <i class="fab fa-youtube" />
+      </a>
       <a
         class="navbar-item"
         href="https://twitter.com/SUPONJI123"
         target="_blank"
       >
-        <span
-          class="icon"
-          style="color: #55acee"
-        >
+        <span class="icon" style="color: #55acee">
           <svg
             class="svg-inline--fa fa-twitter fa-w-16 fa-lg"
             aria-hidden="true"
@@ -86,10 +59,7 @@
         href="https://github.com/stefanleminh"
         target="_blank"
       >
-        <span
-          class="icon"
-          style="color: #333"
-        >
+        <span class="icon" style="color: #333">
           <svg
             class="svg-inline--fa fa-github fa-w-16 fa-lg"
             aria-hidden="true"
@@ -115,7 +85,7 @@
 <script setup></script>
 
 <style scoped lang="scss">
-@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css';
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css";
 .navbar-item {
   transition: all 400ms;
 }
