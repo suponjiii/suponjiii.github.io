@@ -1,0 +1,39 @@
+{
+  "name": "suponjiii.github.io",
+  "version": "1.0.0",
+  "description": "\"# suponjiii.github.io\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue src",
+    "format": "eslint --ext .js,.vue src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanleminh/suponjiii.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanleminh/suponjiii.github.io/issues"
+  },
+  "homepage": "https://github.com/stefanleminh/suponjiii.github.io#readme",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^2.2.4",
+    "animejs": "^3.2.1",
+    "vite": "^2.8.6",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.13",
+    "vue3-slide-up-down": "^1.2.5"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.1.0",
+    "sass": "^1.52.3",
+    "vite-plugin-favicon": "^1.0.8"
+  }
+}
