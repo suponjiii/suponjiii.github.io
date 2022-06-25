@@ -18,7 +18,6 @@ import Footer from './views/page-footer.vue'
 </script>
 
 <style lang="scss">
-@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css';
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,9 +27,11 @@ import Footer from './views/page-footer.vue'
   font-family: 'Abel', sans-serif;
   overflow: hidden;
 }
+
 #main {
   min-height: 80vh;
 }
+
 p {
   font-size: 20px;
 }
@@ -38,18 +39,22 @@ p {
 li {
   font-size: 20px;
 }
+
 section {
   padding-top: 250px !important;
 }
+
 @media (max-width: 480px) {
   iframe {
     width: 100%;
     height: auto;
   }
+
   #title {
     font-size: 50px !important;
   }
 }
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;

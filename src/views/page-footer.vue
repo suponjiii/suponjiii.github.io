@@ -12,4 +12,6 @@
 
 <script setup></script>
 
-<style></style>
+<style lang="scss">
+@import "../node_modules/bulma/sass/layout/footer.sass"
+</style>

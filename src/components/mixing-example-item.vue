@@ -9,12 +9,7 @@
           {{ mixingExample.title }}
         </p>
 
-        <a
-          class="card-header-icon"
-          aria-label="more options"
-          :class="{ activeToggle: isActive }"
-          @click.prevent="toggleBody"
-        >
+        <a class="card-header-icon" aria-label="more options" :class="{ activeToggle: isActive }">
           <span class="icon">
             <i class="fas fa-angle-down" aria-hidden="true" />
           </span>
@@ -55,6 +50,7 @@ const props = defineProps({
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
 #about h3 {
   text-align: center;
 }
@@ -62,12 +58,15 @@ const props = defineProps({
 .introduction {
   margin-bottom: 50px;
 }
+
 .content {
   text-align: center;
 }
+
 .card-header-icon {
   transition-duration: 0.8s;
 }
+
 .activeToggle {
   transform: rotate(180deg);
 }

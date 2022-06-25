@@ -105,6 +105,8 @@ const trioMixingPrice = calculateMixing.calculate(
 </script>
 
 <style>
+@import '../../styles/main.scss';
+
 .factors {
   text-align: center;
   margin-top: 60px;
