@@ -51,11 +51,10 @@
               </p>
             </article>
             <article class="tile is-child box">
-              <p class="title">Pretime your lines</p>
-              <p>Please make sure the lines are <i>at least roughly</i> aligned to the off vocal in terms of timing!
-                <br>
-                <b>That's especially
-                  important for adlibs not from the original since otherwise I have no way of knowing where they go.</b>
+              <p class="title">Export as wav</p>
+              <p>
+                Always export as wav if possible! FLAC or other lossless formats
+                work too but make sure it's not a "compressed" format!
               </p>
             </article>
           </div>
@@ -217,18 +216,40 @@
             <li>- Any glitches?</li>
             <li>- The bridge should have more reverb!</li>
           </ul>
-
-
           </p>
         </article>
       </div>
       <div class="tile is-parent">
+
         <article class="tile is-child box">
-          <p class="title">Export as wav</p>
-          <p>
-            Always export as wav if possible! FLAC or other lossless formats
-            work too but make sure it's not a "compressed" format!
-          </p>
+          <p class="title">Pretime your lines</p>
+          <p>Please make sure the lines are <i>at least roughly</i> aligned to the off vocal in terms of timing! Usually
+            this issue arises during exporting so make sure the exported lines start when they're supposed to.</p>
+          <br>
+          <b>That's especially
+            important for adlibs not from the original since otherwise I have no way of knowing where they go.</b>
+          <div class="columns">
+            <div class="column">
+              <article class="message is-primary">
+                <div class="message-header">
+                  <p>Yes</p>
+                </div>
+                <div class="message-body">
+                  <img src="../assets/images/PretimeYes.png" alt="" />
+                </div>
+              </article>
+            </div>
+            <div class="column">
+              <article class="message is-danger">
+                <div class="message-header">
+                  <p>No</p>
+                </div>
+                <div class="message-body">
+                  <img src="../assets/images/PretimeNo.png" alt="" />
+                </div>
+              </article>
+            </div>
+          </div>
         </article>
       </div>
     </div>

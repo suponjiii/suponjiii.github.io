@@ -63,4 +63,8 @@
 .navbar-item {
   transition: all 400ms;
 }
+
+.fa-youtube {
+  color: #FF0000;
+}
 </style>
