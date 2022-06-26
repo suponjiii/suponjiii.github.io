@@ -54,17 +54,18 @@
         </p>
       </div>
 
-      <div class="factors">
+      <div class="factors content">
+        <br> <br>
         <h3 class="subtitle">Additional factors:</h3>
         <ul>
           <li>
             Additional Tracks ({{ calculateMixing.additionalLinesFactor }}€
             each)
           </li>
-          <li>Length of the song</li>
-          <li>Difficulty</li>
-          <li>Additional effects</li>
-          <li>Deadline</li>
+          <li>- Length of the song</li>
+          <li>- Difficulty</li>
+          <li>- Additional effects</li>
+          <li>- Deadline</li>
         </ul>
       </div>
     </section>
