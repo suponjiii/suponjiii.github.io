@@ -57,7 +57,7 @@
 <script setup></script>
 
 <style scoped lang="scss">
-@import '../styles/main.scss';
+@import "../styles/main.scss";
 @import "../node_modules/bulma/sass/components/navbar.sass";
 
 .navbar-item {
@@ -65,6 +65,6 @@
 }
 
 .fa-youtube {
-  color: #FF0000;
+  color: #ff0000;
 }
 </style>
