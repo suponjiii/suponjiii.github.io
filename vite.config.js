@@ -23,7 +23,9 @@ export default defineConfig({
           @import "../node_modules/bulma/sass/components/message.sass";
           @import "../node_modules/bulma/sass/components/card.sass";
           @import "../node_modules/bulma/sass/components/navbar.sass";
-          @import "../node_modules/bulma/sass/helpers/visibility.sass";`
+          @import "../node_modules/bulma/sass/helpers/visibility.sass";
+          @import "../node_modules/bulma/sass/helpers/spacing.sass";
+          @import "../node_modules/bulma/sass/helpers/typography.sass";`
       }
     }
   }

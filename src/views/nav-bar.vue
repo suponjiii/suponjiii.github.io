@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <router-link class="navbar-item" to="/">
-        <h3>Home</h3>
+        <img src="../assets/capy.png">
       </router-link>
 
       <div class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar"

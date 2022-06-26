@@ -1,8 +1,8 @@
 <template>
   <section id="questions" class="section scroll">
     <h2 class="title">Questions</h2>
-    <div style="margin-bottom: 70px">
-      <h4 class="subtitle">Wait, so how am I going to pay you again-</h4>
+    <div class="mt-6 mb-6">
+      <h4 class="is-size-4 mb-3">Wait, so how am I going to pay you again-</h4>
       <p>
         Paypal preferably! If you have any other suggestions, feel free to tell
         me about them though that’s the easiest and most used one around here so
@@ -12,8 +12,8 @@
       </p>
     </div>
 
-    <div style="margin-bottom: 70px">
-      <h4 class="subtitle">
+    <div class="mb-6">
+      <h4 class="is-size-4 mb-3">
         I really like this website! Can I have one of my own?
       </h4>
       <p>
@@ -23,9 +23,20 @@
         your needs go beyond that, feel free to hit me up!
       </p>
     </div>
+
+    <div class="mb-6">
+      <h4 class="is-size-4 mb-3">
+        Such a cute icon! Who drew this?
+      </h4>
+      <p>
+        The capybara is drawn by none other than the wonderful <a
+          href="https://twitter.com/lunacyhilly">lunacyhilly</a>! Make sure to check her out and commission her!
+      </p>
+    </div>
   </section>
 </template>
 
 <script setup></script>
 
-<style></style>
+<style>
+</style>
