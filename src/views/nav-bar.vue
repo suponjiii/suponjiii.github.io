@@ -5,14 +5,15 @@
         <h3>Home</h3>
       </router-link>
 
-      <div class="navbar-burger">
-        <span />
-        <span />
-        <span />
+      <div class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar"
+        @click="showMobileMenu = !showMobileMenu">
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </div>
     </div>
 
-    <div class="navbar-menu">
+    <div id="navbar" class="navbar-menu" :class="{ 'is-active': showMobileMenu }">
       <div class="navbar-start">
         <router-link class="navbar-item" to="/pricing"> Pricing </router-link>
         <router-link class="navbar-item" to="/process"> Process </router-link>
@@ -54,12 +55,13 @@
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const showMobileMenu = ref(false)
+</script>
 
 <style scoped lang="scss">
-@import "../styles/main.scss";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-
 .navbar-item {
   transition: all 400ms;
 }
