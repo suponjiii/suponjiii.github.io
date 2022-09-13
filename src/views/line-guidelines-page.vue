@@ -2,6 +2,23 @@
   <section class="section">
     <h2 id="line-guidelines" class="title">Line Guidelines</h2>
     <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title">Communication BEFORE and DURING recording</p>
+          <p class="subtitle">If possible</p>
+          <p>
+            Mixing starts with recording - So it just makes sense to already be in contact with the mixer before you
+            start recording.That way you and me and be on the same page as to how you want things to sound and what I
+            need to make that happen. And if you don't know how you want it to sound, I can give suggestions! That way
+            every party knows what to do and what they're going to get.
+            <br> <br>
+            Of course communication is welcomed during recording - Whether you're not sure how to achieve certain
+            things or if you simply need feedback on lines, I will be happy to give advice!
+          </p>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-ancestor">
       <div class="tile is-vertical is-8">
         <div class="tile">
           <div class="tile is-parent">
@@ -77,7 +94,7 @@
             <p>As a suggestion for a format:</p>
             <article class="message">
               <div class="message-body">
-                [<i>Type_Number</i>]_<i>Username</i>_<i>Songname</i>
+                [<i>Type_Number</i>]_<i>Songname</i>_<i>Username</i>
               </div>
             </article>
             <p>Example:</p>
