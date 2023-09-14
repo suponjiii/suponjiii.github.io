@@ -8,29 +8,29 @@ export const genres = {
 }
 
 export const solo = {
-  tuningBase: 13,
-  timingBase: 11,
-  mixingBase: 20,
+  tuningBase: 19,
+  timingBase: 18,
+  mixingBase: 30,
   discount: 0.9
 }
 
 export const duet = {
-  tuningBase: 16,
-  timingBase: 18,
-  mixingBase: 25,
+  tuningBase: 23,
+  timingBase: 24,
+  mixingBase: 35,
   discount: 0.85
 }
 
 export const trio = {
-  tuningBase: 20,
-  timingBase: 25,
-  mixingBase: 30,
+  tuningBase: 32,
+  timingBase: 34,
+  mixingBase: 40,
   discount: 0.8
 }
 
 export const additionalLinesFactor = 2
 
-export function getChorusConstants (amountOfChorusLines) {
+export function getChorusConstants(amountOfChorusLines) {
   const chorusConstants = {
     tuningBase: 1.5 * (trio.tuningBase + (amountOfChorusLines - 3)),
     timingBase: 1.5 * (trio.timingBase + (amountOfChorusLines - 3)),
@@ -40,7 +40,7 @@ export function getChorusConstants (amountOfChorusLines) {
   return chorusConstants
 }
 
-export function calculate (
+export function calculate(
   tuning,
   timing,
   mixing,
