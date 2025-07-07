@@ -29,7 +29,7 @@
     "vue3-slide-up-down": "^1.2.5"
   },
   "devDependencies": {
-    "bulma": "^0.9.4",
+    "bulma": "^1.0.4",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^9.1.0",
