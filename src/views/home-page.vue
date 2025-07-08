@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import anime from "animejs/lib/anime.es.js";
+import { createTimeline } from 'animejs';
 import { onMounted, ref } from "vue";
 
 const titleLetters = ref("suponjiii Mixing");
@@ -32,17 +32,14 @@ onMounted(() => {
     /\S/g,
     "<span class='letter'>$&</span>"
   );
-  anime
-    .timeline({ loop: false })
-    .add({
-      targets: "#title .line",
+  const tl = createTimeline({ loop: false })
+    .add('#title .line', {
       scaleX: [0, 1],
       opacity: [0.5, 1],
       easing: "easeInOutExpo",
       duration: 900,
     })
-    .add({
-      targets: "#title .letter",
+    .add('#title .letter', {
       opacity: [0, 1],
       translateX: [40, 0],
       translateZ: 0,
@@ -85,6 +82,7 @@ onMounted(() => {
 #title .letter {
   display: inline-block;
   line-height: 1em;
+  opacity: 0;
 }
 .subtitle {
   font-size: 25px;
