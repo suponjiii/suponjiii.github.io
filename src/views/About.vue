@@ -47,7 +47,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import MixingExampleItem from '../components/mixing-example-item.vue'
+import MixingExampleItem from '../components/MixingExampleItem.vue'
 import * as mixingExamplesJson from '../assets/mixing-examples.json'
 
 const mixingExamples = ref(mixingExamplesJson)

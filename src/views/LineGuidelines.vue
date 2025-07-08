@@ -1,9 +1,9 @@
 <template>
   <section class="section">
     <h2 id="line-guidelines" class="title">Line Guidelines</h2>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child box">
+    <div class="grid">
+      <div class="cell">
+        <article class="box">
           <p class="title">Communication BEFORE and DURING recording</p>
           <p class="subtitle">If possible</p>
           <p>
@@ -18,11 +18,11 @@
         </article>
       </div>
     </div>
-    <div class="tile is-ancestor">
+    <div class="grid">
       <div class="tile is-vertical is-8">
         <div class="tile">
-          <div class="tile is-parent">
-            <article class="tile is-child box">
+          <div class="cell">
+            <article class="box">
               <p class="title">Record the same kind of line in one sitting</p>
               <p class="subtitle">Consistency!</p>
               <p>
@@ -47,8 +47,8 @@
               </p>
             </article>
           </div>
-          <div class="tile is-parent is-vertical">
-            <article class="tile is-child box">
+          <div class="cell is-vertical">
+            <article class="box">
               <p class="title">Provide any important file or info</p>
               <p>That includes:</p>
               <ul>
@@ -67,7 +67,7 @@
                 Send the files either in an archive or in a folder in the cloud.
               </p>
             </article>
-            <article class="tile is-child box">
+            <article class="box">
               <p class="title">Export as wav</p>
               <p>
                 Always export as wav if possible! FLAC or other lossless formats
@@ -76,8 +76,8 @@
             </article>
           </div>
         </div>
-        <div class="tile is-parent">
-          <article class="tile is-child box">
+        <div class="cell">
+          <article class="box">
             <p class="title">Line naming</p>
             <p class="subtitle">Please seperate and name lines properly.</p>
             <p>
@@ -151,8 +151,8 @@
           </article>
         </div>
       </div>
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child box">
+      <div class="cell is-vertical">
+        <article class="box">
           <p class="title">No overlaps</p>
           <p class="subtitle">please</p>
           <p>
@@ -183,7 +183,7 @@
             </div>
           </div>
         </article>
-        <article class="tile is-child box">
+        <article class="box">
           <p class="title">No clipping</p>
           <p class="subtitle">please</p>
           <p>
@@ -217,9 +217,9 @@
 
       </div>
     </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child box">
+    <div class="grid">
+      <div class="cell">
+        <article class="box">
           <p class="title">Let me know if you want a specific sound!</p>
           <p>
             Generally, if you want a certain part to sound a certain way, please
@@ -236,9 +236,9 @@
           </p>
         </article>
       </div>
-      <div class="tile is-parent">
+      <div class="cell">
 
-        <article class="tile is-child box">
+        <article class="box">
           <p class="title">Pretime your lines</p>
           <p>Please make sure the lines are <i>at least roughly</i> aligned to the off vocal in terms of timing! Usually
             this issue arises during exporting so make sure the exported lines start when they're supposed to.</p>
@@ -276,8 +276,6 @@
 <script setup></script>
 
 <style lang="scss">
-@import '../styles/main.scss';
-
 .column li {
   font-size: 14px;
 }

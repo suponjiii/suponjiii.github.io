@@ -1,11 +1,11 @@
 import { createWebHashHistory, createRouter } from 'vue-router'
-import Home from '../views/home-page.vue'
+import Home from '../views/Home.vue'
 import Pricing from '../views/pricing-page.vue'
-import Contacts from '../views/contacts-page.vue'
-import Questions from '../views/questions-page.vue'
-import Process from '../views/process-page.vue'
-import About from '../views/about-page.vue'
-import LineGuidelines from '../views/line-guidelines-page.vue'
+import Contacts from '../views/Contacts.vue'
+import Questions from '../views/Questions.vue'
+import Process from '../views/Process.vue'
+import About from '../views/About.vue'
+import LineGuidelines from '../views/LineGuidelines.vue'
 
 const routes = [
   {
