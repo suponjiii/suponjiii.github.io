@@ -1,2 +1,6 @@
 $primary: #003A72;
 $danger: #420000;
+@use "bulma/sass" with (
+  $primary: #003A72,
+  $danger: #420000
+);
