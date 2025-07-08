@@ -15,7 +15,7 @@
           </span>
         </a>
       </header>
-      <slide-up-down v-model="isActive" :duration="500">
+      <vue3-slide-up-down v-model="isActive" :duration="500">
         <div ref="articleBody" class="card-content">
           <div class="content">
             <div class="responsive-video">
@@ -23,14 +23,14 @@
             </div>
           </div>
         </div>
-      </slide-up-down>
+      </vue3-slide-up-down>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import SlideUpDown from 'vue3-slide-up-down'
+import {Vue3SlideUpDown} from "vue3-slide-up-down";
 
 const isActive = ref(false)
 
