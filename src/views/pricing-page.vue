@@ -75,7 +75,7 @@
 
 <script setup>
 import * as calculateMixing from "../assets/calculate-mixing";
-import PriceCalculator from "../components/price-calculator.vue";
+import PriceCalculator from "../components/PriceCalculator.vue";
 
 const soloMixingPrice = calculateMixing.calculate(
   calculateMixing.solo.tuningBase,
