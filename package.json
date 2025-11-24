@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/stefanleminh/suponjiii.github.io#readme",
   "dependencies": {
-    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitejs/plugin-vue": "^6.0.2",
     "animejs": "^4.1.2",
     "vite": "^7.1.12",
     "vue": "^3.5.18",
