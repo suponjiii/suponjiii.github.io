@@ -25,7 +25,7 @@
     "animejs": "^4.1.2",
     "vite": "^7.1.12",
     "vue": "^3.5.18",
-    "vue-router": "^4.5.1",
+    "vue-router": "^4.6.3",
     "vue3-slide-up-down": "^2.1.0"
   },
   "devDependencies": {
