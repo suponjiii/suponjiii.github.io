@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "bulma": "^1.0.4",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.5.1",
     "sass": "^1.94.0",
