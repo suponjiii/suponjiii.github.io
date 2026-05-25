@@ -33,7 +33,7 @@
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.9.1",
-    "sass": "^1.99.0",
+    "sass": "^1.100.0",
     "vite-plugin-favicon": "^1.0.8"
   }
 }
